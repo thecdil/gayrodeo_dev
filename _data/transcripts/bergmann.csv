@@ -1,5 +1,5 @@
-timestamp,speakers,words,tags
-[00:00:00],Rebecca Scofield,"This is Rebecca Scofield, I'm here with Roger Bergmann, past IGRA president. It's November 19th and we are at the International Gay Rodeo Association Annual Convention 2016. And yeah, could you tell me a little about where you grew up?",
+timestamp,speaker,words,tags
+[00:00:00],Rebecca Scofield,"This is Rebecca Scofield, I'm here with Roger Bergmann, past IGRA president. It's November 19th and we are at the International Gay Rodeo Association Annual Convention 2016. And yeah, could you tell me a little about where you grew up?", 
 ,Roger Bergmann,"I grew up in Northwest Montana, in Kalispell, Montana, near Glacier National Park. And, as a youth, my parents never went to the annual county fair, but I would ride my bicycle to the fair in August every year and leave it leaning against the fence and stay there all day for the four days. And there would be a rodeo on the weekends and I'd go in and watch the rodeos.",childhood;parents
 ,RS,What did your parents do for a living?,parents 
 ,RB,"My dad was a full time meat cutter, had his own meat shop inside of a small grocery store. And my mom worked as a secretary at various small businesses around town after I was about 6 years old.",parents;jobs

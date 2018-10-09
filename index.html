@@ -1,13 +1,40 @@
 ---
-layout: default
+layout: homepage
 ---
-<div class="container">
-    <div class="row">
-            <div class="col-md-12">
-        <h1>Transcripts</h1>
+<style>b { font-size:larger;}</style>
+<div class="container-fluid">{% for clip in site.data.conversations limit:2 %}
+           <div class="row">
+               <div class="card col-md-4  {% cycle 'offset-md-2 border-right border-dark', 'offset-md-6 border-left-dark' %} border-0">
+                   <div class="card-body">
+                       <p class="card-text">{{clip.comments }}
+                   </p>
+                   <h3  class="text-right">-<a class="text-info" href="transcripts/{{clip.lastname}}.html#{{ clip.comments | truncatewords: 5,''| remove: "<b>" | remove: "</b>" | url_param_escape |}}">{{clip.firstname}} {{clip.lastname}}</a></h3>
+                   </div>
+           </div>      </div>        {%endfor%}
+           {% for clip in site.data.conversations offset:2 %}
+            <div class="row hiderow" >
+                <div class="card col-md-4  {% cycle 'offset-md-2 border-right border-dark', 'offset-md-6 border-left-dark' %} border-0">
+                    <div class="card-body">
+                        <p class="card-text">{{clip.comments }}
+                    </p>
+                    <h3  class="text-right">-<a class="text-info" href="transcripts/{{clip.lastname}}.html#{{ clip.comments | truncatewords: 5,''| remove: "<b>" | remove: "</b>" | url_param_escape |}}">{{clip.firstname}} {{clip.lastname}}</a></h3>
+                    </div>
+            </div>      </div>        {%endfor%}
+            <div class="row">
+                    <div class="col-md-3  offset-md-4 mx-auto text-center">
+                    <button class="btn btn-lg btn-warning text-center" id="more">More + </button>
+                    </div></div>
+<hr />
+<hr />
+                    <div class="container">
+                    <div class="row">
+            <div class="col-md-12 text-center">
+        <h1>All Transcripts</h1>
 {% for transcript in site.transcripts %}
 <h3><a href="transcripts/{{transcript.object-id}}.html">{{transcript.first-name}} {{transcript.last-name}}</a></h3>
 {%endfor%}
     </div>
+   
+
 </div>
 </div>
