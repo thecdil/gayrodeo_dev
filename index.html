@@ -2,7 +2,14 @@
 layout: homepage
 ---
 <style>b { font-size:larger;}</style>
-<div class="container-fluid">{% for clip in site.data.conversations limit:2 %}
+
+<div class="container-fluid">
+    <div class="row">
+            <div class="card col-md-2 offset-md-6  border-0">
+    <h1 class="text-white bg-dark m-0 p-0 border-0" style="font-size:47px;">How Did You Find Gay Rodeo?</h1>
+</div>
+    </div>
+    {% for clip in site.data.conversations limit:2 %}
            <div class="row">
                <div class="card col-md-4  {% cycle 'offset-md-2 border-right border-dark', 'offset-md-6 border-left-dark' %} border-0">
                    <div class="card-body">
