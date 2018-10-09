@@ -1,7 +1,9 @@
 <script>
         $(document).ready(function(){
             $("#more").click(function(){
+                if($("div.hiderow").length == 1){  $("#more").hide();};
                 $( "div.hiderow" ).first().removeClass("hiderow");
             });
+          
         });
         </script>
