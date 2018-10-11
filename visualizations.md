@@ -1,7 +1,6 @@
 ---
 layout: visualization
 title: Visualizations
-order: 2
 object-id: visualizations
 ---
 

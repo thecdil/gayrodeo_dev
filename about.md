@@ -1,7 +1,6 @@
 ---
 layout: default
 title: About
-order: 1
 object-id: about
 ---
 <div class="about-section ">
