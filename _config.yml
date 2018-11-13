@@ -12,7 +12,7 @@ description: Oral Histories from the Interational Gay Rodeo Association
  
 baseurl: /voices
 github_username: uidaholib
-
+github_repository: https://github.com/uidaholib/rodeo-oral-history
 
 collections:
   transcripts:

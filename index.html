@@ -3,34 +3,33 @@ layout: homepage
 ---
 <style>b { font-size:larger;}</style>
 
-<div class="container-fluid">
+<div class="container-fluid timeline">
+        {% for conversation in site.data.conversation-filters %}
     <div class="row">
             <div class="card col-md-4 offset-md-6  border-0">
-    <h1 class="text-white bg-dark m-0 p-0 border-0" style="font-size:47px;">How Did You Find Gay Rodeo?</h1>
+                   
+    <h1 class="text-white bg-dark m-0 p-0 border-0 {{conversation.tag}}" style="font-size:47px;">{{conversation.question}}</h1>
+   
 </div>
     </div>
-    {% for clip in site.data.conversations limit:2 %}
-           <div class="row">
-               <div class="card col-md-4  {% cycle 'offset-md-2 border-right border-dark', 'offset-md-6 border-left-dark' %} border-0">
+ 
+    {% for clip in site.data.master-conversations %}
+    {% if clip.tag contains conversation.tag %}
+           <div class="row {{conversation.tag}} ">
+               <div class="{{clip.tag}} card col-md-4 my-3 my-md-0 border border-secondary text-white {% cycle 'offset-md-2 bg-secondary  left-text-box ', 'offset-md-6 right-text-box ' %}" data-aos="fade-up">
                    <div class="card-body">
-                       <p class="card-text">{{clip.comments }}
-                   </p>
+                       <p class="card-text">{{clip.comments }}                 </p>
                    <h3  class="text-right">-<a class="text-info" href="transcripts/{{clip.lastname}}.html#{{ clip.comments | truncatewords: 5,''| remove: "<b>" | remove: "</b>" | url_param_escape |}}">{{clip.firstname}} {{clip.lastname}}</a></h3>
                    </div>
-           </div>      </div>        {%endfor%}
-           {% for clip in site.data.conversations offset:2 %}
-            <div class="row hiderow" >
-                <div class="card col-md-4  {% cycle 'offset-md-2 border-right border-dark', 'offset-md-6 border-left-dark' %} border-0">
-                    <div class="card-body">
-                        <p class="card-text">{{clip.comments }}
-                    </p>
-                    <h3  class="text-right">-<a class="text-info" href="transcripts/{{clip.lastname}}.html#{{ clip.comments | truncatewords: 5,''| remove: "<b>" | remove: "</b>" | url_param_escape |}}">{{clip.firstname}} {{clip.lastname}}</a></h3>
-                    </div>
-            </div>      </div>        {%endfor%}
+           </div>      </div>        {%endif%}
+           {%endfor%}
             <div class="row">
-                    <div class="col-md-3  offset-md-4 mx-auto text-center">
+                    <div class="col-md-3  offset-md-4 mx-auto text-center mt-4">
                     <button class="btn btn-lg btn-warning text-center" id="more">More + </button>
                     </div></div>
+
+                
+                    {%endfor%}
 <hr />
 <hr />
                     
