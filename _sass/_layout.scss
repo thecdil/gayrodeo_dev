@@ -104,10 +104,13 @@ list-style:disc;
 .timeline::after {
     content: '';
     position: absolute;
-    width: 6px;
+    width: 3px;
     background-color: black;
     top: 0;
     bottom: 0;
     left: 50%;
     margin-left: -3px;
+    @include media-query($on-palm){
+        opacity:0;
+    }
 }
