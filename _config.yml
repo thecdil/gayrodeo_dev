@@ -17,6 +17,9 @@ github_repository: https://github.com/uidaholib/rodeo-oral-history
 collections:
   transcripts:
       output: true
+      permalink: /interviews/:collection/:name
+  interviews:
+      output: true
       permalink: /:collection/:name
 
 defaults:
@@ -24,6 +27,10 @@ defaults:
       type: transcripts
     values:
       layout: transcript
+  - scope:
+      type: interviews
+    values:
+      layout: interviews
       
 
 

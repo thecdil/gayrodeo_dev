@@ -2,7 +2,7 @@
 layout: default
 title: Transcripts
 object-id: transcripts
-permalink: transcripts/
+permalink: interviews/transcripts/
 ---
 ## Transcripts
 
