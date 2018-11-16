@@ -1,20 +1,21 @@
 ---
 layout: homepage
 ---
-
-<div class="container-fluid timeline">
-        {% for conversation in site.data.conversation-filters %}
-    <div class="row">
-            <div class="card col-md-4 offset-md-6  border-0">
+{% for conversation in site.data.conversation-filters %}
+<div class="container-fluid timeline {% unless forloop.first %}hiderow mt-4{%endunless%}">
+     
+    <div class="row ">
+            <div class="card col-md-4 offset-md-6  border-0 bg-dark" style="margin-top:-10px;">
                    
-    <h1 class="text-white bg-dark m-0 p-0 border-0 {{conversation.tag}}" style="font-size:47px;">{{conversation.question}}</h1>
+    <h1 class="text-white bg-dark border-0 {{conversation.tag}}" style="font-size:47px;">{{conversation.question}}</h1>
    
 </div>
     </div>
  
     {% for clip in site.data.master-conversations %}
     {% if clip.tag contains conversation.tag %}
-           <div class="row {{conversation.tag}} my-4">
+    
+           <div class="row {{conversation.tag}} my-4 ">
                <div class="{{clip.tag}} card col-md-4 my-3 my-md-0 border border-secondary text-white {% cycle 'offset-md-2 bg-secondary  left-text-box ', 'offset-md-6 right-text-box ' %}" data-aos="{% cycle  'zoom-in-right', 'zoom-in-left'%}">
                    <div class="card-body">
                        <p class="card-text"><a class="text-white clip"href="transcripts/{{clip.lastname}}.html#{{ clip.comments | truncatewords: 5,''| remove: "<b>" | remove: "</b>" | url_param_escape |}}">{{clip.comments }}</a>                 </p>
@@ -22,13 +23,14 @@ layout: homepage
                    </div>
            </div>      </div>        {%endif%}
            {%endfor%}
-            <div class="row">
-                    <div class="col-md-3  offset-md-4 mx-auto text-center mt-4">
-                    <button class="btn btn-lg btn-warning text-center" id="more">More + </button>
-                    </div></div>
-
-                
+        </div>  
+           
                     {%endfor%}
-<hr />
-<hr />
+                    <div class="row">
+                        <div class="col-md-3  offset-md-4 mx-auto text-center mt-4">
+                        <button class="btn btn-lg btn-warning text-center" id="more">New Conversation </button>
+                        </div></div>
+    
+                    
+
                     
