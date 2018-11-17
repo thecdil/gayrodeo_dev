@@ -114,5 +114,6 @@ list-style:disc;
         opacity:0;
     }
 }
-
-.people-img{max-height: 350px;}
+.people-img-container{max-width: 350px;}
+.people-img{     max-height: 350px;
+    overflow: hidden;}
