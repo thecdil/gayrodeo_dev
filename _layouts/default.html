@@ -5,14 +5,18 @@
   </head>
 
   <body>
+      <div class="wrapper">
+         
     {% include site-navbanner.html %}
     <main role="main">
-      <div class="container">
+      <div class="container-fluid">
       {{ content }}
       </div>
     </main>
     {% include footer.html %}
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
     {% include foot.html %}
+      </div>
   </body>
 
 </html>

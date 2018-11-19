@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-<div class="container">
+<div class="container-fluid">
+   
   <div class="row mb-4">
     <div class="col-md-8">
     <h2 class="poet-name"> {{ page.first-name }} {{ page.last-name }}</h2>
@@ -10,25 +11,21 @@ layout: default
     <a class="btn btn-lg btn-success" href="transcripts\{{  page.object-id}}.html">Transcript</a>
     </div></div>
               <div class="row">
-               
-               
-       <div class="col-md-8">
-        
-     <h3>Location: {{page.location}} </h3>
-     <h3 class="mb-4">Date: {{page.date-interviewed}} <br> Interviewer: {{page.interviewer}}</h3>
-     <h4> Highlights</h4>
-     <ul>
-     {% for clip in site.data.master-conversations %}
-    {% if clip.lastname == page.last-name %}
-    <li class="card-text"><a class="clip text-dark" href="transcripts/{{clip.lastname}}.html#{{ clip.comments | truncatewords: 5,''| remove: "<b>" | remove: "</b>" | url_param_escape |}}">{{clip.comments }}</a>                 </li>
-    {%endif%}
-    {%endfor%}
-     </ul>
-        </div>
-        <div class="col-md-4 people-img-container">
+                  <div class="col-md-3 people-img-container py-5">
           
-            <img class="img-fluid people-img" src="{{ page.object-id | prepend: 'images/people/' | relative_url}}.jpg">
-               </div>
+                      <img class="img-fluid people-img" src="{{ page.object-id | prepend: 'images/people/' | relative_url}}.jpg">
+                         </div>
+               
+       
+                         <div class="col-md-4">
+     <h3>Interview Location: {{page.location}} </h3>
+     <h5 class="mb-4">Date: {{page.date-interviewed}} <br> Interviewer: {{page.interviewer}}</h5>
+     <p>{{content}}</p>
+    </div>
+     <div class="col-md-5">
+     {%include carousel.html%}
+        </div>
+      
               </div>
       <div class="row mt-5">
         <div class="col-md-12">
