@@ -22,7 +22,7 @@ layout: default
 
  
     <div class="row mt-4">  
-      <h2>Interview Highlights</h2>
+      
      {% for clip in site.data.master-conversations %}
     {% if clip.lastname == page.last-name %}
     <div class="row">
@@ -45,9 +45,7 @@ layout: default
                     {%endfor%}
     
                        
-  
-
-      <div class="row my-5">
+       <div class="row my-5">
         <div class="col-md-12 mb-5">
             {%include visualization-style.html %}
            
@@ -64,7 +62,9 @@ layout: default
                             <br/>
                             {%endif%}
                             {%endfor%}
-                            <br/>   <br/>
+                            <br/> <p> Click below to filter the visualization by subject.</p>
+                                 <br/>
+                            
                             {%include visualization-filter-legend.html %}
           </div>
         </div>

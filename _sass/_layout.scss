@@ -49,6 +49,7 @@
     float:left;
     margin-bottom:1px; 
     overflow: hidden;
+    cursor:pointer;
 }
   .featured{display:block;float:none; clear:both;}
  .line{display: block; font-size:8px; float:left;width:100px;}
@@ -65,6 +66,8 @@
 list-style:disc;
     li{margin:10px 0px;}
 }
+
+.clip-highlight{font-size:20px;}
 
 .left-text-box{position: relative;
 	background: #6c757d !important;
@@ -132,6 +135,16 @@ list-style:disc;
 
     .carousel-item{height: 350px;overflow:hidden;}
 
+        /* Tooltip */
+        .tooltip > .tooltip-inner {
+          font-size:16px;
+          max-width: 500px !important;
+          @include media-query($on-palm){
+            max-width: 300px !important;
+            font-size:11px;
+        }
+       }
+
 /* Sidebar */
 /*
  * Sidebar
@@ -192,7 +205,12 @@ list-style:disc;
     display: block;
     padding: .5rem 1rem;
     border-top: 1px solid rgba(255,255,255,.1);
+    font-size:17px;
   }
+.dropdown-item{font-size:14px;}
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #fff;}
+
   .sidebar-nav-item.active,
   a.sidebar-nav-item:hover,
   a.sidebar-nav-item:focus {

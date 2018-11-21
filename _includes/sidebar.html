@@ -1,7 +1,7 @@
   <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
      <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
-     
+
      <!-- Toggleable sidebar -->
      <div class="sidebar" id="sidebar">
        <div class="sidebar-item">
@@ -9,23 +9,46 @@
        </div>
      
        <nav class="sidebar-nav">
-         <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
+          <ul class="nav flex-column">
+              <li class="nav-item">
+                  <a class="nav-link sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
+              </li>         
      
          {% comment %}
            The code below dynamically generates a sidebar nav of pages with
            `layout: page` in the front-matter. See readme for usage.
          {% endcomment %}
-     
+         <style>
+            /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+     .dropdown-container {
+         display: none;
+         background-color: #262626;
+         padding-left: 8px;
+     }
+            </style>
          {% assign pages_list = site.pages | sort:"url" %}
          {% for node in pages_list %}
            {% if node.title != null %}
-             {% if node.layout == "default" %}
-               <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | relative_url }}">{{ node.title }}</a>
+             {% if node.layout != "search" %}
+                {% if node.object-id != "interviews" %}
+                <li class="nav-item">
+                    <a class="nav-link sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | relative_url }}">{{ node.title }}</a>
+                  </li>
+               {% else %}
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle sidebar-nav-item{% if page.url == node.url %} active{% endif %} dropdown-btn" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ node.title }}</a>
+                
+                <div class="dropdown-container" >
+                {% for transcript in site.transcripts %}
+                <a class="dropdown-item nav-link sidebar-nav-item{% if page.url == node.url %} active{% endif %} ml-2" href="{{transcript.object-id | append: ".html" | prepend: "/interviews/" | relative_url}}">{{transcript.first-name}} {{transcript.last-name}}</a>
+                {%endfor%}
+            </div>
+            
+               {% endif %}
              {% endif %}
            {% endif %}
          {% endfor %}
-     
-         <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
+          </ul>
          <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
          <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
        </nav>
@@ -37,4 +60,20 @@
        </div>
      </div>
      
-     
+     <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+        </script>
