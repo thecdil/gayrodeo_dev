@@ -32,7 +32,7 @@ layout: default
           <div class="container">
               <div class="row">
                   <div class="col-md-12">
-       <header><h2 class="poet-name">Interview with {{ page.first-name }} {{ page.last-name }}</h2>
+       <header><h2 class="poet-name">Interview with <a href="{{ page.object-id | prepend: "/interviews/" | append: ".html" | relative_url}}">{{ page.first-name }} {{ page.last-name }}</a></h2>
     <p>{{page.location}} on {{page.date-interviewed}} | Interviewer: {{page.interviewer}}</p>
   </header> 
   <div class="filteroptions">

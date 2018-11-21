@@ -1,34 +1,54 @@
 ---
 layout: default
 ---
-<div class="container-fluid">
-   
-  <div class="row mb-4">
-    <div class="col-md-8">
-    <h2 class="poet-name"> {{ page.first-name }} {{ page.last-name }}</h2>
-    </div>
-    <div class="col-md-4">
-    <a class="btn btn-lg btn-success" href="transcripts\{{  page.object-id}}.html">Transcript</a>
-    </div></div>
-              <div class="row">
-                  <div class="col-md-3 people-img-container py-5">
-          
-                      <img class="img-fluid people-img" src="{{ page.object-id | prepend: 'images/people/' | relative_url}}.jpg">
-                         </div>
-               
+<div class="container">
+    <div class="row mb-4">
+    <div class="col-md-6 text-center">
        
-                         <div class="col-md-4">
-     <h3>Interview Location: {{page.location}} </h3>
-     <h5 class="mb-4">Date: {{page.date-interviewed}} <br> Interviewer: {{page.interviewer}}</h5>
-     <p>{{content}}</p>
+    <div class="people-img-container py-3">
+      <img class="img-fluid people-img" src="{{ page.object-id | prepend: 'images/people/' | relative_url}}.jpg">
     </div>
-     <div class="col-md-5">
-     {%include carousel.html%}
-        </div>
-      
-              </div>
-      <div class="row mt-5">
-        <div class="col-md-12">
+   
+    
+    </div>
+    <div class="col-md-6 text-center">
+    <h1 class="person-name"> {{ page.first-name }} {{ page.last-name }}</h1>
+    <p>{{content}}</p>
+    <h5>Interview Location: {{page.location}} </h3>
+     <h5 class="mb-4">Date: {{page.date-interviewed}} | Interviewer: {{page.interviewer}}</h5>
+     <a class="btn btn-lg btn-success mt-4" href="transcripts\{{  page.object-id}}.html">Go to Transcript</a>
+    </div>
+  
+
+ 
+    <div class="row mt-4">  
+      <h2>Interview Highlights</h2>
+     {% for clip in site.data.master-conversations %}
+    {% if clip.lastname == page.last-name %}
+    <div class="row">
+    <div class="col-md-3">
+    {% for conversation in site.data.conversation-filters %}
+    {% if clip.tag contains conversation.tag %}
+    <h4 class="text-right question mt-5">{{conversation.question}}</h4>
+    {%endif%} {%endfor%}
+    </div>
+    <div class="col-md-9">
+                   <div class="{{clip.tag}} card col-md-6 my-5 border border-secondary text-white {% cycle 'offset-md-4 bg-secondary  left-text-box ', 'offset-md-3 right-text-box ' %}" data-aos="{% cycle  'zoom-in-right', 'zoom-in-left'%}">
+                   <div class="card-body">
+                       <p class="card-text"><a class="text-white clip" href="interviews/transcripts/{{clip.lastname}}.html#{{ clip.comments | truncatewords: 5,''| remove: "<b>" | remove: "</b>" | url_param_escape }}">{{clip.comments }}</a>                 </p>
+                   <h3  class="text-right">-<a class="text-info" href="interviews/{{clip.lastname | downcase}}.html">{{clip.firstname}} {{clip.lastname}}</a></h3>
+                   </div>
+           </div>   
+          </div>   
+        </div> 
+                {%endif%}
+                    {%endfor%}
+    
+                       
+  
+
+      <div class="row my-5">
+        <div class="col-md-12 mb-5">
             {%include visualization-style.html %}
            
             {% for transcript in site.data.transcripts %}{%assign transcript-name = transcript[0] %}
@@ -38,14 +58,15 @@ layout: default
                     {% assign my_integer = forloop.length %}
     {% assign my_float = my_integer | times: 1.0 %}
     {% assign rect-width = 100 | divided_by: my_float  %}
-                {%if forloop.first%}<text x="0" y="0">Interview Visualization</text> <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50"  data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}" ></rect>
+                {%if forloop.first%}<text x="0" y="0" style="font-size:30px;">Browse Interview by Subject</text> <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50"  data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}" ></rect>
                 {%else %} <a href="{{ item.words | truncatewords: 5,'' | url_param_escape | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}"><rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}"  title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}" ></rect></a>
                             {%endif%}{%endfor%}</svg> 
                             <br/>
                             {%endif%}
                             {%endfor%}
+                            <br/>   <br/>
                             {%include visualization-filter-legend.html %}
           </div>
         </div>
-
-  
+        <br/>   <br/>   <br/>   <br/>
+      </div>  
