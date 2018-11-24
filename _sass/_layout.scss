@@ -1,4 +1,5 @@
-
+body{font-size:1.1em;
+font-family:'Noto Sans TC', Helvetica, arial, sans-serif;}
 .site-title{
     margin:20px;
     font-size:90px; 
@@ -67,8 +68,9 @@ list-style:disc;
     li{margin:10px 0px;}
 }
 
-.clip-highlight{font-size:20px;}
 
+//.clip{color:transparent !important}
+//.clip-highlight{color:white !important;}
 .left-text-box{position: relative;
 	background: #6c757d !important;
 	border-radius: .4em;
