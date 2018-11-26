@@ -9,7 +9,9 @@
 title: Voices of Gay Rodeo
 email: rscofield@uidaho.edu
 description: Oral Histories from the Interational Gay Rodeo Association
- 
+homepage-background-image: 'images/bg/bg005.jpg' 
+
+
 baseurl: /voices
 github_username: uidaholib
 github_repository: https://github.com/uidaholib/rodeo-oral-history
