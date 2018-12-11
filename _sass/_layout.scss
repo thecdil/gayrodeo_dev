@@ -341,15 +341,3 @@ list-style:disc;
     }
   }
 
-  /**
- * background
- */
-.home{background-color: transparent;  background-repeat: no-repeat;
-  background-size: cover;height: 1000px; background-attachment: fixed; position: absolute;
-  
-   @include media-query($on-palm) {
-
-       height:500px;
-   }
-   }
-
