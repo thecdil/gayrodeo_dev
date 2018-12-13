@@ -2,6 +2,7 @@
 layout: homepage
 ---
 {% for conversation in site.data.conversation-filters %}
+<script id="{{conversation.tag}}" type="html">
 <div class="container-fluid timeline mb-5 {% unless forloop.first %}hiderow mt-5{%endunless%}">
      
     <div class="row ">
@@ -23,9 +24,11 @@ layout: homepage
                    </div>
            </div>      </div>        {%endif%}
            {%endfor%}
+     
         </div>  
-           
+   
                     {%endfor%}
+                </script>
                     <div class="row">
                         <div class="col-md-3  offset-md-4 mx-auto text-center mt-4">
                         <button class="btn btn-lg btn-warning text-center" id="more">New Conversation </button>

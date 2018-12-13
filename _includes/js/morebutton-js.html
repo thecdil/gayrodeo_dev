@@ -1,9 +1,19 @@
 <script>
+       var div = document.createElement('div');
+div.setAttribute('class', 'special');
+div.innerHTML = document.getElementById('special').innerHTML;
+document.getElementById('targetElement').appendChild(div);
+
+var converstaions = ["special","started","injuries"]
+
+       
         $(document).ready(function(){
+
+            
             $("#more").click(function(){
                 if($("div.hiderow").length == 1){  $("#more").hide();};
                 $( "div.hiderow" ).first().removeClass("hiderow");
             });
           
         });
-        </script>
+</script>
