@@ -21,7 +21,7 @@ layout: homepage
            <div class="row {{conversation.tag}} my-4 ">
                <div class="{{clip.tag}} card col-md-4 my-3 my-md-0 border border-secondary text-white {% cycle 'offset-md-2 bg-secondary  left-text-box ', 'offset-md-6 right-text-box ' %}" data-aos="{% cycle  'zoom-in-right', 'zoom-in-left'%}">
                    <div class="card-body">
-                       <p class="card-text"><a class="text-white clip" href="interviews/transcripts/{{clip.lastname}}.html#{{ clip.comments | truncatewords: 5,''| remove: "<b>" | remove: "</b>" | url_param_escape }}">{{clip.comments | truncatewords: 25 }}</a>                 </p>
+                       <p class="card-text"><a class="text-white clip" href="interviews/transcripts/{{clip.lastname}}.html#{{ clip.comments | truncatewords: 5,''| remove: "<b>" | remove: "</b>" | url_param_escape }}">{{clip.comments }}</a>                 </p>
                    <h3  class="text-right">-<a class="text-info" href="interviews/{{clip.lastname | downcase}}.html">{{clip.firstname}} {{clip.lastname}}</a></h3>
                    </div>
            </div>      </div>        {%endif%}
