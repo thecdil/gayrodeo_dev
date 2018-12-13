@@ -1,19 +1,42 @@
 <script>
-       var div = document.createElement('div');
-div.setAttribute('class', 'special');
-div.innerHTML = document.getElementById('special').innerHTML;
-document.getElementById('targetElement').appendChild(div);
-
-var converstaions = ["special","started","injuries"]
-
        
-        $(document).ready(function(){
 
-            
+var conversations = ["special","started","injuries"]
+/**
+ * Randomize array element order in-place.
+ * Using Durstenfeld shuffle algorithm.
+ */
+ function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+
+shuffleArray(conversations);
+var i;
+for (i = 0; i < conversations.length; i++) {
+    console.log([conversations[i]]);
+
+    
+}
+
+
+        $(document).ready(function(){
+            var div = document.createElement('div');
+div.setAttribute('class', conversations[0]);
+console.log([conversations[0]]);
+div.innerHTML = document.getElementById([conversations[0]]).innerHTML;
+document.getElementById('convo-1').appendChild(div);
+AOS.init();
             $("#more").click(function(){
-                if($("div.hiderow").length == 1){  $("#more").hide();};
-                $( "div.hiderow" ).first().removeClass("hiderow");
-            });
+                var div1 = document.createElement('div');
+                div1.setAttribute('class', conversations[1]);
+                div1.innerHTML = document.getElementById(conversations[1]).innerHTML;
+document.getElementById('convo-2').appendChild(div1);
+AOS.init();            });
           
         });
 </script>

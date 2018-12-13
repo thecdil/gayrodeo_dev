@@ -3,8 +3,9 @@ layout: homepage
 ---
 
 {% for conversation in site.data.conversation-filters %}
+<div id="convo-{{forloop.index}}"></div>
 <script id="{{conversation.tag}}" type="html">
-<div class="container-fluid timeline mb-5 {% unless forloop.first %}hiderow mt-5{%endunless%}">
+<div class="container-fluid timeline mb-5 {% unless forloop.first %}mt-5{%endunless%}">
      
     <div class="row ">
             <div class="card col-md-4 offset-md-6  border-0 bg-dark" style="margin-top:-10px;">
