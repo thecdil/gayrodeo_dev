@@ -6,7 +6,11 @@ layout: default
     <div class="col-md-6 text-center">
        
     <div class="people-img-container py-3">
+      {% if page.image == "n" %}
+      <img class="img-fluid people-img" src="{{ 'stock' | prepend: 'images/people/' | relative_url}}.jpg">
+      {% else %}
       <img class="img-fluid people-img" src="{{ page.object-id | prepend: 'images/people/' | relative_url}}.jpg">
+      {% endif %}
     </div>
    
     
