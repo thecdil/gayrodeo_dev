@@ -11,9 +11,10 @@ email: rscofield@uidaho.edu
 description: Oral Histories from the Interational Gay Rodeo Association
 homepage-background-image: 'images/bg/bg005.jpg' 
 
-
+# library's domain (only changed if using github pages)
+url: https://www.lib.uidaho.edu
 # baseurl: /voices
-baseurl: /rodeo-oral-history
+baseurl: /digital/rodeo-oral-history
 github_username: uidaholib
 github_repository: https://github.com/uidaholib/rodeo-oral-history
 
