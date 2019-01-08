@@ -14,9 +14,9 @@ date: 2019
 # library's domain (only changed if using github pages)
 url: https://www.lib.uidaho.edu
 # baseurl: /voices
-baseurl: /digital/rodeo-oral-history
+baseurl: /digital/gayrodeo
 github_username: uidaholib
-github_repository: https://github.com/uidaholib/rodeo-oral-history
+github_repository: https://github.com/uidaholib/gayrodeo
 
 collections:
   transcripts:
