@@ -16,7 +16,7 @@ url: https://www.lib.uidaho.edu
 # baseurl: /voices
 baseurl: /digital/gayrodeo
 github_username: uidaholib
-github_repository: https://github.com/uidaholib/gayrodeo
+github_repository: https://github.com/uidaholib/gayrodeo_source
 
 collections:
   transcripts:
