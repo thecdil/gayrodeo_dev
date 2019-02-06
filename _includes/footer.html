@@ -1,28 +1,17 @@
-<style>
-  .vl {
-    border-left: 4px solid black;
-    height: 100px;
-  }
-</style>
-
 <footer class="navbar nav-light bg-light border-top mt-3">
-  <div class="container py-3">
-    <div class="row">
-      <div class="col-md-12">
-          <a class="h3" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
-          <p class="pl-3"><span class="text-muted">{{ site.description }}</span></p>
-          <p> a <a href="https://cdil.lib.uidaho.edu/">Center for Digital Inquiry and Learning (CDIL)</a> production</p>
-      </div>
+  <div class="row py-3">
+    <div class="col-md-4 pl-5 align-self-center">
+      <a class="h3" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
+      <p class="pl-3"><span class="text-muted">{{ site.description }}</span></p>
+      <p>{% include icon-github.html %}</p>
     </div>
-    <hr>
-    <div class="row">
-      <div class="col-md-12">
-        <ul style="list-style-type:none">
-        <li>Questions: <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        <br>
-        <li> {% include icon-github.html %}</li>
-        </ul>
-      </div>
+    <div class="col-md-4 pt-3 align-self-center text-center">
+      <p>A <a href="https://cdil.lib.uidaho.edu/">Center for Digital Inquiry and Learning (CDIL)</a> production</p>
+      <p>Questions: <a href="mailto:{{ site.email }}">{{ site.email }}</p>
+    </div>
+    <div class="col-md-4 align-self-center text-center">
+      {% include logo-class.html %}
+      <div class="pt-2">{% include logo-library.html %}</div>
     </div>
   </div>
 </footer>
