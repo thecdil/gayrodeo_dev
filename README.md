@@ -1,13 +1,30 @@
-# Oral History as Data (OHD) - a Lib-STATIC Tool
+# Voices of Gay Rodeo
 
-> **work in progress!**
+## About:
+
+The Gay Rodeo Oral History Project was created in 2016 with the aid of a University of Idaho Seed Grant. Having conducted archival research on the International Gay Rodeo Association at the Autry Museum of the American West, I was struck by the precarious future of the association, the deep commitment of its members, and the rarity of public-facing projects engaged with rural LGBTQ+ communities. My initial grant helped fund the purchase of audio equipment and travel to seven rodeo events over the course of a year.
+
+To date, I have conducted 33 interviews with 34 members of the International Gay Rodeo Association. During the 2016-2017 collection process, I quickly discovered that interviewing at a rodeo presents its own special challenges. Rodeoers often have only 20 minutes to spare between bronc-riding and barrel-racing and rarely is there a place that provides optimal recording conditions. Wanting to capture people’s everyday experiences, I sought a wide cross-section of members: old-timers and newcomers; members of all sexual and gender identities; and competitors and organizers. With the aid of University of Idaho’s Center for Digital Inquiry and Learning, we have curated many of these interviews in order to highlight the points of convergence and departure that gay rodeoers experience. Over the next several years, we hope to continue to grow the oral history collection and this web exhibit.
+
+This project would not be possible without the tireless historical and organizational work conducted by IGRA’s leadership and royalty teams, and individuals like Frank Harrell, Roger Bergmann, Patrick Terry, and so many more.
+
+For information on the history of gay rodeo see: [http://gayrodeohistory.org/](http://gayrodeohistory.org/)
+To see IGRA’s upcoming schedule see: [https://www.igra.com/CalendarRodeo.html](https://www.igra.com/CalendarRodeo.html)
+
+Rebecca Scofield
+Assistant Professor of History
+University of Idaho
+
+---
+
+## This site was created with Oral History as Data (OHD) - a Lib-STATIC Tool
 
 The Oral History as Data (OHD) tool is a static website generator that allows users to analyze and publish coded oral history or qualitative interview files. By turning transcriptions into tagged/coded CSV files, adding a list of filters, and creating a simple markdown file for each interview (to be included in the _transcipt collection), OHD will provide filterable transcripts and a color coded visualization for all transcripts included. 
 
 Use this site and the demo files included to learn how to use and deploy the code. Direct any questions here: 
 <libstatic.uidaho@gmail.com>
 
-# oral-history-as-data
+### oral-history-as-data
 
 <https://github.com/uidaholibrary/oral-history-as-data>
 
