@@ -11,7 +11,7 @@ object-id: about
 <p>This project would not be possible without the tireless historical and organizational work conducted by IGRA’s leadership and royalty teams, and individuals like Frank Harrell, Roger Bergmann, Patrick Terry, and so many more.</p> 
 <br/>
 <p>For information on the history of gay rodeo see: <a href="http://gayrodeohistory.org/" target="_blank">http://gayrodeohistory.org/</a></p> 
-<p>To see IGRA’s upcoming schedule see: <a href="https://www.igra.com/CalendarRodeo.htm" target="_blank">ttps://www.igra.com/CalendarRodeo.htm</a></p>
+<p>To see IGRA’s upcoming schedule see: <a href="https://www.igra.com/CalendarRodeo.html" target="_blank">ttps://www.igra.com/CalendarRodeo.html</a></p>
 <br/>
 <p>Rebecca Scofield</p>
 <p>Assistant Professor of History</p>
