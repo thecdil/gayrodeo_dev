@@ -11,20 +11,19 @@ This project would not be possible without the tireless historical and organizat
 For information on the history of gay rodeo see: [http://gayrodeohistory.org/](http://gayrodeohistory.org/)  
 To see IGRA’s upcoming schedule see: [https://www.igra.com/CalendarRodeo.html](https://www.igra.com/CalendarRodeo.html)
 
-Rebecca Scofield, Assistant Professor of History
-
+Rebecca Scofield, Assistant Professor of History  
 University of Idaho
 
 ---
 
-## This site was created with Oral History as Data (OHD) - a Lib-STATIC Tool
+# This site was created with Oral History as Data (OHD) - a Lib-STATIC Tool
 
 The Oral History as Data (OHD) tool is a static website generator that allows users to analyze and publish coded oral history or qualitative interview files. By turning transcriptions into tagged/coded CSV files, adding a list of filters, and creating a simple markdown file for each interview (to be included in the _transcipt collection), OHD will provide filterable transcripts and a color coded visualization for all transcripts included. 
 
 Use this site and the demo files included to learn how to use and deploy the code. Direct any questions here: 
 <libstatic.uidaho@gmail.com>
 
-### oral-history-as-data
+## oral-history-as-data
 
 <https://github.com/uidaholibrary/oral-history-as-data>
 
