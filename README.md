@@ -8,11 +8,11 @@ To date, I have conducted 33 interviews with 34 members of the International Gay
 
 This project would not be possible without the tireless historical and organizational work conducted by IGRA’s leadership and royalty teams, and individuals like Frank Harrell, Roger Bergmann, Patrick Terry, and so many more.
 
-For information on the history of gay rodeo see: [http://gayrodeohistory.org/](http://gayrodeohistory.org/)
+For information on the history of gay rodeo see: [http://gayrodeohistory.org/](http://gayrodeohistory.org/)  
 To see IGRA’s upcoming schedule see: [https://www.igra.com/CalendarRodeo.html](https://www.igra.com/CalendarRodeo.html)
 
-Rebecca Scofield
-Assistant Professor of History
+Rebecca Scofield, Assistant Professor of History
+
 University of Idaho
 
 ---
