@@ -18,9 +18,13 @@ layout: default
     <div class="col-md-6 text-center">
     <h1 class="person-name"> {{ page.first-name }} {{ page.last-name }}</h1>
     <p>{{content}}</p>
+    {% if page.object-id != "all" %}
     <h5>Interview Location: {{page.location}} </h3>
      <h5 class="mb-4">Date: {{page.date-interviewed}} | Interviewer: {{page.interviewer}}</h5>
      <a class="btn btn-lg btn-success mt-4" href="transcripts\{{  page.object-id}}.html">Go to Transcript</a>
+    {% else %}
+    <a class="btn btn-lg btn-success mt-4" href="transcripts\{{  page.object-id}}.html">Go to Transcripts</a>
+    {% endif %}
     </div>
   
 
@@ -66,10 +70,12 @@ layout: default
                             <br/>
                             {%endif%}
                             {%endfor%}
+                            {% if page.object-id != "all" %}
                             <br/> <p> Click below to filter the visualization by subject.</p>
                                  <br/>
                             
                             {%include visualization-filter-legend.html %}
+                            {% endif %}
           </div>
         </div>
         <br/>   <br/>   <br/>   <br/>
