@@ -1,5 +1,7 @@
 body{font-size:1.1em;
-  font-family:'Noto Sans TC', Helvetica, arial, sans-serif;}
+  font-family:'Noto Sans TC', Helvetica, arial, sans-serif;
+  overflow-x: hidden;
+}
   .site-title{
       margin:20px;
       font-size:90px; 
@@ -27,14 +29,16 @@ body{font-size:1.1em;
           height:100%; 
           margin: 0 !important; 
           padding: 0 !important;
-          overflow: visible;
+          overflow-y: visible;
+          overflow-x: hidden;
           display:block;
         }
   
         .transcript-content{
             height:auto;
             min-height:5000px;
-            overflow:visible;
+            overflow-y: visible;
+            overflow-x: hidden;
             display:block;
         }
       
@@ -339,3 +343,24 @@ body{font-size:1.1em;
                 transform: translateX(-24rem);
       }
     }
+    .backgrounds {
+    
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      z-index: -1;
+  
+  }
+  .backgrounds .background {
+  
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-attachment: fixed;
+  
+  }
