@@ -1,7 +1,7 @@
 ---
 object-id: helander    
 transcript: test1  
-first-name: Brain
+first-name: Brian
 last-name: Helander
 date-interviewed: October 21, 2017
 location: Albuquerque, New Mexico
