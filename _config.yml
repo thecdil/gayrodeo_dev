@@ -17,6 +17,8 @@ url: https://www.lib.uidaho.edu
 baseurl: /digital/gayrodeo
 github_username: uidaholib
 github_repository: https://github.com/uidaholib/gayrodeo_source
+# Collection's objects dir location
+objects: https://www.lib.uidaho.edu/digital/objects/gayrodeo
 
 collections:
   transcripts:
