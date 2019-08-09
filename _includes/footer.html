@@ -1,4 +1,4 @@
-<footer class="navbar nav-light bg-light border-top mt-3">
+<footer class="navbar nav-light bg-light mt-0 py-0 b-0">
   <div class="row py-1">
     <div class="col-md-4 pl-5 align-self-center">
       <a class="h3" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
@@ -6,12 +6,14 @@
       <p>Questions: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
     </div>
     <div class="col-md-4 align-self-center text-center">
-      <p>{% include footer/logo-cdil.html %}</p>
+      <p class="mb-0 pt-4">Design and Development:</p>
+      {% include footer/logo-cdil.html %}
+      <hr/>
       <p>{% include footer/icon-github.html %}</p>
     </div>
     <div class="col-md-4 align-self-center text-center">
-      <div class="m-2">{% include footer/logo-whiting.html %}</div>
-      <div class="m-2 pb-3">{% include footer/logo-class.html %}</div>
+        <p class="mb-0 pt-0">Supported by: </p>
+      {% include footer/logo-whiting.html %}
     </div>
   </div>
 </footer>

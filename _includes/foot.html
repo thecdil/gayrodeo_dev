@@ -7,13 +7,6 @@
 {% if page.layout == "interviews" %}{% include js/visualization-js.html %} {%include js/carousel-js.html%}
 <script src="{{ '/assets/js/aos.js' | relative_url }}"></script>
 <script>AOS.init();</script>{% endif %}
-{% if page.layout == "data" %}{% include js/table-js.html %}{% endif %}
-{% if page.layout == "map" %}{% include js/map-js.html %}{% endif %}
-{% if page.layout == "subjects" %}{% include js/subjects-js.html %}{% endif %}
-{% if page.layout == "search" %}{% include js/lunr-js.html %}{% endif %}
-{% if page.layout == "browse" %}{% include js/browse-js.html %}{% endif %}
-{% if page.layout == "timeline" %}{% include js/timeline-js.html %}{% endif %}
-{% if page.layout == "home-infographic" %}{% include js/carousel-js.html %}{% endif %}
 {% if page.layout == "homepage" %}<script src="{{ '/assets/js/aos.js' | relative_url }}"></script>
 <script>
         
