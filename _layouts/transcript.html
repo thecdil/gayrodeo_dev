@@ -58,9 +58,9 @@ layout: default
                </select></h2>
 <h3 class="text-center">
     <div class="form-inline my-2 my-lg-0" >
-  <input type="text" id="quicksearch" placeholder="Search ... " class="searchinput form-control mr-2" > 
-  <input class="searchinput mx-2 btn btn-lg btn-success" title="Search" value="Go" alt="Search" id="goButton" onclick="filterItems()"> 
-<button class="reset btn btn-secondary ml-2" href="#" data-filter="" class="filter">Reset Filters</button>
+  <input type="text" id="quicksearch" placeholder="Search ... " class="searchinput form-control mr-2 col-md-7 col-8 mt-md-0 mt-2" > 
+  <input class="searchinput mx-2 btn btn-lg btn-success col-2 mt-md-0 mt-2" title="Search" value="Go" alt="Search" id="goButton" onclick="filterItems()"> 
+<button class="reset btn btn-secondary ml-md-2 mt-md-0 mt-2 float-right" href="#" data-filter="" class="filter">Reset Filters</button>
     </div>
     {% if page.object-id == 'all' %}
     {% capture lines %}{% for transcript in site.data.transcripts %}{% for item in transcript[1] %}{% if forloop.first == true %}{{ forloop.length }};{% else %}{% endif %}{% endfor %}{% endfor %}{%endcapture%}
