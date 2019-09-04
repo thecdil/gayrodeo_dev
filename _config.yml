@@ -12,9 +12,9 @@ description: Oral Histories from the International Gay Rodeo Association
 date: 2019
 
 # library's domain (only changed if using github pages)
-url: https://www.lib.uidaho.edu
+url: https://www.voicesofgayrodeo.com
 # baseurl: /voices
-baseurl: /digital/gayrodeo
+baseurl: 
 github_username: uidaholib
 github_repository: https://github.com/uidaholib/gayrodeo_source
 # Collection's objects dir location
