@@ -362,3 +362,17 @@ body{font-size:1.1em;
   top: 0;	
   background-attachment: fixed;	
    }
+
+   .social-icon-sidebar svg {
+    width: 25px;
+    height: 25px;
+    fill: white;
+    &:hover{color:transparent;}
+  }
+  .social-icon-footer svg {
+    width: 25px;
+    height: 25px;
+    fill: black;
+    &:hover{color:transparent;}
+  }
+.sr-only, .social-icon, .social-icon:hover{color:transparent !important}
