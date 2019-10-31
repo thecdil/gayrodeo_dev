@@ -3,31 +3,31 @@
 
 <html>
 
-  {% include head.html %}
-  
-  <body> 
-    
-    {% include sidebar.html %}
-     
+{% include head.html %}
+
+<body>
+
+  {% include sidebar.html %}
+
   <div class="backgrounds overlay">
-      <div class="background aos-init aos-animate" data-aos="fade-in" data-aos-duration="1500" data-aos-anchor=".section--hero" id="homeback"></div>
+    <div class="background aos-init aos-animate" data-aos="fade-in" data-aos-duration="1500" data-aos-anchor=".section--hero" id="homeback"></div>
   </div>
 
-<header class="hero">
+  <header class="hero">
     {% include site-navbanner.html %}
   </header>
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+  <div class="page-content">
+    <div class="wrapper">
+      {{ content }}
     </div>
-   
-      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-    {% include footer.html %}
-    {% include foot.html %}
-    {% include js/morebutton-js.html %}
-  
+  </div>
+
+  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+  {% include footer.html %}
+  {% include foot.html %}
+  {% include js/morebutton-js.html %}
+
 </body>
 
 </html>
