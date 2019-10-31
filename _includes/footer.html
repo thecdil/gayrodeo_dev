@@ -1,30 +1,31 @@
 <footer class="navbar nav-light bg-light mt-0 py-0 b-0">
   <div class="row py-1">
-    <div class="col-md-4 pl-5 align-self-center">
+    <div class="col-md-4 pl-5 pt-4 align-self-center">
       <a class="h3" href="{{ '/' | absolute_url }}">{{ site.title }} </a>
-    
+
       <p class="pl-3 mb-0"><span class="text-muted">{{ site.description }}</span></p>
       <ul class="nav nav-pills ">
         {% for nav in site.data.nav-configuration %}
         <li class="nav-item">
-          <a class="nav-link text-info" href="{{ nav.stub | relative_url }}">{{ nav.display-text }}</a> 
+          <a class="nav-link text-info" href="{{ nav.stub | relative_url }}">{{ nav.display-text }}</a>
         </li>
         {% endfor %}
       </ul>
-      <p class="pl-3">  <a class="social-icon" href="https://www.facebook.com/voicesofgayrodeo" title="Facebook Link" target="_blank" rel="noopener"><span class="social-icon-footer">{% include social-icon.html icon="Facebook" %}</span><span class="sr-only">Facebook</span></a>
-        <a class="social-icon" href="https://twitter.com/gayrodeoproject" title="Twitter Link" target="_blank" rel="noopener"><span class="social-icon-footer">{% include social-icon.html icon="Twitter" %}</span><span class="sr-only">Twitter</span></a>
-        <a class="social-icon" href="https://www.instagram.com/voicesofgayrodeo/" title="Instagram Link" target="_blank" rel="noopener"><span class="social-icon-footer">{% include social-icon.html icon="Instagram" %}</span><span class="sr-only">Instagram</span></a></p>
-       
-      
+
+
     </div>
     <div class="col-md-4 align-self-center text-center">
       <p class="mb-0 pt-4">Design and Development:</p>
       {% include footer/logo-cdil.html %}
-      <hr/>
-      <p>{% include footer/icon-github.html %}</p>
+      <hr />
+      <p class="pl-3">
+        <a class="social-icon" href="https://github.com/uidaholib/gayrodeo_source" title="Facebook Link" target="_blank" rel="noopener"><span class="social-icon-footer">{% include social-icon.html icon="GitHub" %}</span><span class="sr-only">GitHub</span></a>
+        <a class="social-icon" href="https://www.facebook.com/voicesofgayrodeo" title="Facebook Link" target="_blank" rel="noopener"><span class="social-icon-footer">{% include social-icon.html icon="Facebook" %}</span><span class="sr-only">Facebook</span></a>
+        <a class="social-icon" href="https://twitter.com/gayrodeoproject" title="Twitter Link" target="_blank" rel="noopener"><span class="social-icon-footer">{% include social-icon.html icon="Twitter" %}</span><span class="sr-only">Twitter</span></a>
+        <a class="social-icon" href="https://www.instagram.com/voicesofgayrodeo/" title="Instagram Link" target="_blank" rel="noopener"><span class="social-icon-footer">{% include social-icon.html icon="Instagram" %}</span><span class="sr-only">Instagram</span></a></p>
     </div>
-    <div class="col-md-4 text-center">
-        <p class="mb-0 pt-4">Supported by: </p>
+    <div class="col-md-4 text-center pb-4">
+      <p class="mb-0 pt-4">Supported by: </p>
       {% include footer/logo-whiting.html %}
 
     </div>
