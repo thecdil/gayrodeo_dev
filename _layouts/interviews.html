@@ -2,82 +2,86 @@
 layout: default
 ---
 <div class="container">
-    <div class="row mb-4">
+  <div class="row mb-4">
     <div class="col-md-6 text-center">
-       
-    <div class="people-img-container py-3">
-      {% if page.image == "n" %}
-      <img class="img-fluid people-img" src="{{ 'stock' | prepend: 'images/people/' | relative_url}}.jpg">
-      {% else %}
-      <img class="img-fluid people-img" src="{{ page.object-id | prepend: 'images/people/' | relative_url}}.jpg">
-      {% endif %}
-    </div>
-   
-    
-    </div>
-    <div class="col-md-6 text-center">
-    <h1 class="person-name"> {{ page.first-name }} {{ page.last-name }}</h1>
-    <p>{{content}}</p>
-    {% if page.object-id != "all" %}
-    <h5>Interview Location: {{page.location}} </h3>
-     <h5 class="mb-4">Date: {{page.date-interviewed}} | Interviewer: {{page.interviewer}}</h5>
-     <a class="btn btn-lg btn-success mt-4" href="transcripts\{{  page.object-id}}.html">Go to Transcript</a>
-    {% else %}
-    <a class="btn btn-lg btn-success mt-4" href="transcripts\{{  page.object-id}}.html">Go to Transcripts</a>
-    {% endif %}
-    </div>
-  
 
- 
-    <div class="row mt-4">  
-      
-     {% for clip in site.data.master-conversations %}
-    {% if clip.lastname == page.last-name %}
-    <div class="row">
-    <div class="col-md-3">
-    {% for conversation in site.data.conversation-filters %}
-    {% if clip.tag contains conversation.tag %}
-    <h4 class="text-right question mt-5">{{conversation.question}}</h4>
-    {%endif%} {%endfor%}
+      <div class="people-img-container py-3">
+        {% if page.image == "n" %}
+        <img class="img-fluid people-img" src="{{ 'stock' | prepend: 'images/people/' | relative_url}}.jpg">
+        {% else %}
+        <img class="img-fluid people-img" src="{{ page.object-id | prepend: 'images/people/' | relative_url}}.jpg">
+        {% endif %}
+      </div>
+
+
     </div>
-    <div class="col-md-9">
-                   <div class="{{clip.tag}} card col-md-6 my-5 border border-secondary text-white {% cycle 'offset-md-4 bg-secondary  left-text-box ', 'offset-md-3 right-text-box ' %}" data-aos="{% cycle  'zoom-in-right', 'zoom-in-left'%}">
-                   <div class="card-body">
-                       <p class="card-text"><a class="text-white clip" href="transcripts/{{clip.lastname | downcase}}.html#{{ clip.comments | truncatewords: 5,''| remove: "<b class='clip-highlight'>" | remove: "</b>" | url_param_escape }}">{{clip.comments }}</a>                 </p>
-                   <h3  class="text-right">-<a class="text-info" href="interviews/{{clip.lastname | downcase}}.html">{{clip.firstname}} {{clip.lastname}}</a></h3>
-                   </div>
-           </div>   
-          </div>   
-        </div> 
-                {%endif%}
-                    {%endfor%}
-    
-                       
-       <div class="row my-5">
-        <div class="col-md-12 mb-5">
-            {%include visualization-style.html %}
-           
-            {% for transcript in site.data.transcripts %}{%assign transcript-name = transcript[0] %}
-            {%if transcript-name == page.object-id %}
-            <svg class="chart" width="100%" height="100px" style="overflow: visible">
-                    {% for item in transcript[1] %}
-                    {% assign my_integer = forloop.length %}
-    {% assign my_float = my_integer | times: 1.0 %}
-    {% assign rect-width = 100 | divided_by: my_float  %}
-                {%if forloop.first%}<text x="0" y="0" style="font-size:30px;">Browse Interview by Subject</text> <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50"  data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}" ></rect>
-                {%else %} <a href="{{ item.words | truncatewords: 5,'' | url_param_escape | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}"><rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}"  title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}" ></rect></a>
-                            {%endif%}{%endfor%}</svg> 
-                            <br/>
-                            {%endif%}
-                            {%endfor%}
-                            {% if page.object-id != "all" %}
-                            <br/> <p> Click below to filter the visualization by subject.</p>
-                                 <br/>
-                            
-                            {%include visualization-filter-legend.html %}
-                            {% endif %}
+    <div class="col-md-6 text-center">
+      <h1 class="person-name"> {{ page.first-name }} {{ page.last-name }}</h1>
+      <p>{{content}}</p>
+      {% if page.object-id != "all" %}
+      <h5>Interview Location: {{page.location}} </h3>
+        <h5 class="mb-4">Date: {{page.date-interviewed}} | Interviewer: {{page.interviewer}}</h5>
+        <a class="btn btn-lg btn-success mt-4" href="transcripts\{{  page.object-id}}.html">Go to Transcript</a>
+        {% else %}
+        <a class="btn btn-lg btn-success mt-4" href="transcripts\{{  page.object-id}}.html">Go to Transcripts</a>
+        {% endif %}
+    </div>
+
+
+    <div class="row mt-4">
+
+      {% for clip in site.data.master-conversations %}
+      {% if clip.lastname == page.last-name %}
+      <div class="row">
+        <div class="col-md-3">
+          {% for conversation in site.data.conversation-filters %}
+          {% if clip.tag contains conversation.tag %}
+          <h4 class="text-right question mt-5">{{conversation.question}}</h4>
+          {%endif%} {%endfor%}
+        </div>
+        <div class="col-md-9">
+          <div class="{{clip.tag}} card col-md-6 my-5 border border-secondary text-white {% cycle 'offset-md-4 bg-secondary  left-text-box ', 'offset-md-3 right-text-box ' %}" data-aos="{% cycle  'zoom-in-right', 'zoom-in-left'%}">
+            <div class="card-body">
+              <p class="card-text"><a class="text-white clip" href="transcripts/{{clip.lastname | downcase}}.html#{{ clip.comments | truncatewords: 5,''| remove: "<b class='clip-highlight'>" | remove: "</b>" | url_param_escape }}">{{clip.comments }}</a> </p>
+              <h3 class="text-right">-<a class="text-info" href="interviews/{{clip.lastname | downcase}}.html">{{clip.firstname}} {{clip.lastname}}</a></h3>
+            </div>
           </div>
         </div>
-        <br/>   <br/>   <br/>   <br/>
-      </div>  
+      </div>
+      {%endif%}
+      {%endfor%}
+
+
+      <div class="row my-5">
+        <div class="col-md-12 mb-5">
+          {%include visualization-style.html %}
+
+          {% for transcript in site.data.transcripts %}{%assign transcript-name = transcript[0] %}
+          {%if transcript-name == page.object-id %}
+          <svg class="chart" width="100%" height="100px" style="overflow: visible">
+            {% for item in transcript[1] %}
+            {% assign my_integer = forloop.length %}
+            {% assign my_float = my_integer | times: 1.0 %}
+            {% assign rect-width = 100 | divided_by: my_float  %}
+            {%if forloop.first%}<text x="0" y="0" style="font-size:30px;">Browse Interview by Subject</text>
+            <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}"></rect>
+            {%else %} <a href="{{ item.words | truncatewords: 5,'' | url_param_escape | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}">
+              <rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}"></rect>
+            </a>
+            {%endif%}{%endfor%}
+          </svg>
+          <br />
+          {%endif%}
+          {%endfor%}
+          {% if page.object-id != "all" %}
+          <br />
+          <p> Click below to filter the visualization by subject.</p>
+          <br />
+
+          {%include visualization-filter-legend.html %}
+          {% endif %}
+        </div>
+      </div>
+      <br /> <br /> <br /> <br />
     </div>
+  </div>
