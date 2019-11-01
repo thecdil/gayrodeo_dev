@@ -1,6 +1,6 @@
 ---
-object-id: lee  
-transcript: transcript-lee  
+object-id: leedanny  
+transcript: transcript-leedanny  
 first-name: Danny
 last-name: Lee
 date-interviewed: May 12, 2017

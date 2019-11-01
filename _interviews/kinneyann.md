@@ -1,6 +1,6 @@
 ---
-object-id: kinney    
-transcript: transcript-kinney  
+object-id: kinneyann    
+transcript: transcript-kinneyann  
 first-name: Ann
 last-name: Kinney
 date-interviewed: September 11, 2016

@@ -1,6 +1,6 @@
 ---
-object-id: hallwood  
-transcript: transcript-hallwood  
+object-id: hallwooddavid  
+transcript: transcript-hallwooddavid  
 first-name: David
 last-name: Hallwood
 date-interviewed: November 19, 2016

@@ -1,6 +1,6 @@
 ---
-object-id: morgan    
-transcript: transcript-morgan  
+object-id: morganjack    
+transcript: transcript-morganjack  
 first-name: Jack
 last-name: Morgan
 date-interviewed: September 11, 2016

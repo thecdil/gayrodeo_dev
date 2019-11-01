@@ -1,6 +1,6 @@
 ---
-object-id: rodriguez    
-transcript: transcript-rodriguez  
+object-id: rodriguezjoe    
+transcript: transcript-rodriguezjoe  
 first-name: "'Paniolo' Joe"
 last-name: Rodriguez
 date-interviewed: September 10, 2016

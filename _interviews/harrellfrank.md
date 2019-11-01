@@ -1,6 +1,6 @@
 ---
-object-id: harrell    
-transcript: transcript-harrell
+object-id: harrellfrank    
+transcript: transcript-harrellfrank
 first-name: Frank 
 last-name: Harrell
 date-interviewed: July 7, 2017

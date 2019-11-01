@@ -1,6 +1,6 @@
 ---
-object-id: roby  
-transcript: transcript-roby
+object-id: robybruce  
+transcript: transcript-robybruce
 first-name: Bruce "Grumpy"
 last-name: Roby
 date-interviewed: September 11, 2016

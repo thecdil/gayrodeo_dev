@@ -1,6 +1,6 @@
 ---
-object-id: bergmann  
-transcript: transcript-bergmann  
+object-id: bergmannroger  
+transcript: transcript-bergmannroger  
 first-name: Roger
 last-name: Bergmann
 date-interviewed: November 19, 2016

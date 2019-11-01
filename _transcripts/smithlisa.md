@@ -1,6 +1,6 @@
 ---
-object-id: smith  
-transcript: transcript-smith  
+object-id: smithlisa  
+transcript: transcript-smithlisa  
 first-name: Lisa
 last-name: Smith
 date-interviewed: November 20, 2016

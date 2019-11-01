@@ -1,6 +1,6 @@
 ---
-object-id: pratt    
-transcript: transcript-pratt  
+object-id: prattcandy    
+transcript: transcript-prattcandy  
 first-name: Candy
 last-name: Pratt
 date-interviewed: September 10, 2016
