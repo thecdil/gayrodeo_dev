@@ -1,12 +1,16 @@
 <script>
-$(document).ready(function(){
-    $(".legend").click(function(){
-        var $thisColor = $(this).attr("data-id");
-        $("rect").not('.'+$thisColor).toggleClass("black");
+    $(document).ready(function(){
+        $(".legend").click(function(){
+            $("rect").removeClass("black");
+            var $thisColor = $(this).attr("data-id");
+            $("rect").not('.'+$thisColor).toggleClass("black");
+        });
+        $("#reset").click(function(){
+            $("rect").removeClass("black");
+               });
+        // init tooltips
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
     });
-    // init tooltips
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    });
-});
-</script>
+    </script>
