@@ -12,10 +12,10 @@ description: Oral Histories from the International Gay Rodeo Association
 date: 2019
 
 # library's domain (only changed if using github pages)
-url: https://www.voicesofgayrodeo.com # https://uidaholib.github.io 
+url: https://thecdil.github.io 
 baseurl: # /gayrodeo_source
-github_username: uidaholib
-github_repository: https://github.com/uidaholib/gayrodeo_source
+github_username: thecdil
+github_repository: https://github.com/thecdil/gayrodeo_dev
 # Collection's objects dir location
 objects: /images/team
 
