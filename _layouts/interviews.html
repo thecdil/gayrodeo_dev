@@ -42,8 +42,8 @@ layout: default
         <div class="col-md-9">
           <div class="{{clip.tag}} card col-md-6 my-5 border border-secondary text-white {% cycle 'offset-md-4 bg-secondary  left-text-box ', 'offset-md-3 right-text-box ' %}" data-aos="{% cycle  'zoom-in-right', 'zoom-in-left'%}">
             <div class="card-body">
-              <p class="card-text"><a class="text-white clip" href="transcripts/{{clip.lastname | downcase}}.html#{{ clip.comments | truncatewords: 5,''| remove: "<b class='clip-highlight'>" | remove: "</b>" | url_param_escape }}">{{clip.comments }}</a> </p>
-              <h3 class="text-right">-<a class="text-info" href="interviews/{{clip.lastname | downcase}}.html">{{clip.firstname}} {{clip.lastname}}</a></h3>
+              <p class="card-text"><a class="text-white clip" href="transcripts/{{clip.lastname | downcase}}{{clip.firstname | downcase}}.html#{{ clip.comments | truncatewords: 5,''| remove: "<b class='clip-highlight'>" | remove: "</b>" | url_param_escape }}">{{clip.comments }}</a> </p>
+              <h3 class="text-right">-<a class="text-info" href="{{clip.lastname | downcase}}{{clip.firstname | downcase}}.html">{{clip.firstname}} {{clip.lastname}}</a></h3>
             </div>
           </div>
         </div>
