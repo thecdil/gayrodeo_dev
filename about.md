@@ -18,7 +18,7 @@ This project would not be possible without the tireless historical and organizat
 
 For information on the history of gay rodeo, see: [http://gayrodeohistory.org/](http://gayrodeohistory.org/){:target='_blank'}.
 
-For IGRA’s upcoming schedule, see: [https://www.igra.com/CalendarRodeo.html](https://www.igra.com/CalendarRodeo.html){:target='_blank'}.
+For IGRA’s upcoming schedule, see: [https://www.igra.com/CalendarRodeo.htm](https://www.igra.com/CalendarRodeo.htm){:target='_blank'}.
 
 <div class="py-2"><strong>
 <p><em>Rebecca Scofield</em><br>  
