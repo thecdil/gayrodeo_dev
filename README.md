@@ -2,6 +2,8 @@
 
 This repository holds the source code for <https://voicesofgayrodeo.com/>.
 
+Coding Instructions: <https://uidaholib.github.io/gayrodeo-coding/>
+
 ## About:
 
 The Gay Rodeo Oral History Project was created in 2016 with the aid of a University of Idaho Seed Grant. Having conducted archival research on the International Gay Rodeo Association at the Autry Museum of the American West, I was struck by the precarious future of the association, the deep commitment of its members, and the rarity of public-facing projects engaged with rural LGBTQ+ communities. My initial grant helped fund the purchase of audio equipment and travel to seven rodeo events over the course of a year.
