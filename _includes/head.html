@@ -15,4 +15,6 @@
 
 {% if jekyll.environment != "server" %}
 <meta name="robots" content="noindex">
+{% else %}
+{% include matomo-analytics.html %}
 {% endif %}
