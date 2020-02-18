@@ -1,0 +1,92 @@
+timestamp,speaker,words,tags
+,Rebecca Scofield,"I am here at the Texas Tradition Rodeo outside Dallas, it's April 1st, 2017. This is Rebecca Scofield with Ricky Phoummany. Can you tell me what year you were born?",childhood
+[00:00:17],Ricky Phoummany,1988,childhood
+,RS,Where did you grow up?,childhood
+,RP,I grew up in a little suburb called Watauga outside of Fort Worth.,childhood
+,RS,And what was that like?,childhood
+[00:00:31],RP,"I guess coming from a traditional Asian family...I'm first generation and it was just traditional, like go to school, do good, make good grades, this and that, but I kind of veered off and explored the art side. I was in choir, theater, band, dance, everything.",childhood;family
+,RS,How big was your town?,childhood
+[00:01:07],RP,It was pretty big. Pretty big.,childhood
+,RS,Pretty suburban?,childhood
+,RP,"Yeah, very suburban.",childhood
+,RS,And what did your parents do?,childhood;family;parents
+,RP,"My parents are machinists, so they work on assembly lines and such.",family;parents
+,RS,How did they find those jobs?,family;parents
+,RP,"I guess through relatives. When they came over seas from Laos--we're Laotian--we had family here, they networked and I guess that's how they found their jobs.",family;jobs;parents
+,RS,Did they enjoy their jobs?,family;jobs;parents
+[00:01:42],RP,"Yeah, I mean, they know the American dream: they come to America and they make a better life.",family;jobs;parents
+,RS,Did you live in town or out on some property?,childhood;family
+,RP,"We lived in the town, you know, just got your neighbors next to you, across the street, and behind you.",childhood;family
+,RS,Did you have any interest in animals growing up?,childhood
+,RP,"Not much, just the typical ""Oh, I want a dog"" and such, but I mean we have a dog so that's about it.",childhood
+,RS,So no work around stock or anything?,childhood
+,RP,"No, no.",childhood
+,RS,What about...did you like country music growing up?,childhood
+[00:02:24],RP,"Yeah, I had a god family so my parents would let me go hang out with them, my best friend and such, and I was very exposed to the country lifestyle 'cause they always took me to rodeos and listened to country music in the car so it was really different. [Laughs]",childhood;family
+,RS,Did you have siblings?,family
+,RP,"Yes, I have a little brother and a little sister.",family
+,RS,So you're the oldest?,family
+,RP,I am the oldest.,family
+,RS,As you were getting into performance as a young person what was your favorite thing?,childhood
+,RP,"I always wanted to grow up to be a singer. And I guess in high school I was like you know, maybe this is not my thing. I can sing, I mean not the best, but I can sing. But I started getting interested in dance and just how your body can do such crazy things so.",childhood;dance
+,RS,What did you do after high school?,childhood
+,RP,"I went to college at Texas Tech up in Lubbock, so west Texas country lifestyle. I decided to go there because I wanted to be close to home but far away from home and it's like a 6 hour drive. In college I had decided to major in computer science to make my parents happy, but then getting to college I was like, ""This is not what I want to do, I'm not going to be happy waking up every day"" and I decided to switch to education, and that's what I do now. And I majored in dance so I teach dance in high school.",childhood;jobs
+,RS,"Wow, that's really cool. Where?",jobs
+[00:04:09],RP,"Adamson High School in Oakland, which is a little suburb in Dallas.",jobs
+,RS,What type of dance do you teach?,jobs
+,RP,"I teach everything: ballet, jazz, modern, hip-hop, tap, folkloric, just everything 'cause that's what we learned in college--to be diverse.",jobs
+,RS,How do your students respond?,jobs
+[00:04:31],RP,"The high school I teach at didn't have a dance program. They had--I guess you would call it drill team, traditional Texas, military style drill team, so when I took over when I was hired, I started the dance program and it's grown immaculately and the kids are just hungry to learn all these different dance styles. It's really neat to see their eyes brighten up.",jobs;teaching
+,RS,Can you tell me a little about the school district you work in? Is it pretty affluent or kids with struggling families?,jobs
+,RP,"I work for, I guess, a low-income district, but it's a big district. There're about 20 high schools. It's Dallas, so it's big, but a lot of the kids come from low income lifestyles. That shouldn't stop them from learning. And it doesn't and that's what really impresses me as an educator.",jobs;teaching
+,RS,"Well it's so great that your school supports the arts. So often they get cut. So, how did you find out about gay rodeo?",igra
+[00:05:45],RP,"I came out in 2013, so a year after I graduated from college, and then I had friends that I grew up with in high school and I moved back to the DFW area, and just being out and about and just seeing who was around. I joined the Turtle Creek Chorale, which is a men's chorus in Dallas. And I networked with people and got exposed and I started charity work and I won my first title as Mr. Charity America 2015. As Mr. Charity America you go around and meet all these other organizations and people and that's how I found TGRA cause a lot of former Mr. Charity Americas were part of TGRA and that's how I got exposed to the rodeo lifestyle.",igra;comingout
+,RS,So could you tell me a little bit more about Charity America and what they do?,jobs
+[00:06:46],RP,"Yeah. Charity America, we represent...it was called Home for the Holidays but now I believe it's Texas Red Ribbon. Basically we raise money to help those with AIDS and HIV with medical bills and funeral expenses if it comes down to that. And that's pretty much it.",jobs
+,RS,"Wow. So, do you compete in the rodeo at all?",events
+,RP,I do. I do. I guess the camp events--goat dressing--and then I do calf roping on foot. I started back in 2014. My first rodeo to compete in was in Oklahoma.,events
+,RS,What was that like?,events
+[00:07:33],RP,"It was it was scary at first but the funny thing is that everyone’s there to help you and teach you different techniques and methods so it's really a safe zone where people are willing to help you and not shun you away. Its competition, but we are all family and here to have fun.",events;mentor;highlight
+,RS,That's great. Did you get pretty good at that?,events
+,RP,"Mm, I believe I'm improving. I won my first ribbon in goat dressing last year in Oklahoma.",events
+,RS,That's exciting.,
+,RP,That was exciting.,
+,RS,And do you compete at multiple events in the year or do you stick close to Oklahoma and Texas?,events;igra
+[0:08:18],RP,It's just been Oklahoma and Texas but I guess being royalty I'm now trying to explore more of what's out there with the other organizations and associations.,events;igra;jobs
+,RS,So how did you decide to compete for a royalty title with IGRA?,igra;events;jobs
+[00:08:36],RP,"Starting with my first title, Mr. Charity America, I saw that it's just not competing in the arena but there's also behind the scenes of the royalty with people using their talents to help raise money for the charity or cause. So everyone’s like, ""You have talent. You're a great entertainer, you should give it a try and see what happens."" So I became a candidate for Mr. TGRA and then I won the title of Mr. TGRA 2016 and then went to Vegas in October and tried to compete for Mr. IGRA 2017 and got 2nd runner up.",igra;events;jobs
+,RS,That's exciting.,
+,RP,Yeah.,
+,RS,Do you think you'll compete again next year?,events
+[00:09:24],RP,"Maybe not next year, I'm going to probably take a couple years off and focus on work, on the kids, grow my program and then probably come back, because that's the type of person I am.",events;jobs
+,RS,If you're not involved with the royalty side are you still going to be involved with TGRA on the organizational side or the rodeos?,jobs
+,RP,"Oh yeah, I think I would obviously come back and help out just because TGRA has helped me become the person I am today and it's always good to give back to what's giving to you.",jobs
+,RS,So are you out to your parents?,family;comingout
+[00:10:09],RP,"Yes, I am. At first it was a little rocky because, like I said, it's a traditional Asian family--they want you to be a doctor, lawyer, all this crazy stuff--then they saw what I was doing. I was loving it and I could say I was successful in doing what I'm doing so they support me, but we don't talk about it as much. They're just like, ""Okay, cool."" [Laughs]",family;comingout
+,RS,Do you ever take boyfriends home?,family;comingout
+[00:10:35],RP,No. I don't live with my parents. When I came back from college I lived with them for a couple months and got on my feet and then moved. Just to start my own life I guess.,family;comingout
+,RS,So no one special yet?,
+,RP,"No, not yet, there've been a few but, you know, rocky road.",
+,RS,And what do you think it is about the rodeo vs. these other really great organizations like Charity America or Imperial Court System? What is it about the rodeo that brings people in who may not have experience with stock growing up or things like that?,igra;community
+[00:11:15],RP,"Well, I guess I come from that 'cause I mean I grew up exposed to it but I never touched the dirt, or touched the animals before, 'cause I was always scared. It's just amazing seeing a city boy coming in and you can start somewhere competing, like the camp events are what draws people in. Like, I can put underwear on a goat. Or let me try throwing on a wig and jump on a steer or something like that. So I believe it's the comradery and the loving spirit that everyone has because we are all from different states and different associations and we can come together and help each other out. When I first started competing I didn't have any ropes or gear and people lent stuff to me to use and compete with, and you learn tips and tricks along the way. Again, I don't think it's...the rodeo life isn't ""better"" than something else because I've also been a part of the Court system. It's all working together raising money for our communities. You know, there's the Court system and they do their own thing and there’s the rodeo.",igra;community;events
+,RS,Do you see much overlap between organizations?,community
+[00:12:38],RP,"Yeah, there're people who are part of the court system that do rodeo and then vice versa. We're all a big community just living life trying to have fun.",community
+,RS,"As an Asian man in a rodeo association, is the association fairly diverse or fairly white?",race
+[00:13:10],RP,"By looking at it, from a spectator side it's predominately white, but you know we have our Mexicans, our blacks, don't see very many Asians except for myself [laughs] but again it's the loving spirit that everybody has. Which makes it great.",race;community
+,RS,Do you ever get any surprised comments when you say you participate in rodeo?,cowperson
+[00:13:32],RP,"I do, they look at me--'cause I'm known as a pretty boy--they're like, ""You play in the dirt? You ride horses and all this stuff?"" And I'm like yeah, you know it's just exploring life, trying new things, taking risks.",cowperson;highlight
+,RS,Would you call yourself a cowboy?,cowperson
+,RP,"Mmmm. No. I don't think so. Well, I don't know. That's kind of hard. 'Cause, you think of cowboys and you think of people that have property and work in the fields and have the horses and their livestock. So I don't know, that's really tough.",cowperson
+,RS,What about other people who live in cities but rodeo? Would you call them cowboys?,cowperson
+[00:14:26],RP,"Again, it's just a no because...what's interesting is you learn about these people and where they grew up and where they are now so, if they did grow up on a farm and such I would say yeah, you are a cowboy, because you've had experience. And for those that just live in the city and stuff you can call them...urban cowboys? So, I don't know, for me it just shouldn’t have a title, shouldn't have a label, we're all here to compete and have fun and do what we love to do.",cowperson
+,RS,"That's interesting. Well, there seems to be a lot of frustration in trying to get younger members. As a young person, what do you think the future of IGRA is moving forward?",igra
+[00:16:15],RP,"I think it's just getting out there and making sure we are exposed. With me being part of the younger generation, you know, showing the people of my generation, like you can be a part of this stuff, you know. The people who started this came from somewhere. They had to work hard to give us what we have now and we shouldn't take that for granted. It's about the history of where we come from and how we can keep that alive. For me it's now talking to people who are like, ""Oh you rodeo,"" it's inviting them out, let them watch, show them pictures, show them Facebook and our social media stuff that we have nowadays and they realize they can be a part of it as well and I believe getting more younger generations involved is gonna be what keeps the organization alive. ",igra;community
+,RS,That's interesting. Well is there anything else you want to talk about?,
+,RP,Not that I know of.,
+,RS,So what was the very first rodeo you went to?,childhood
+,RP,"The first rodeo would be, in Fort Worth on an elementary school field trip. Fort Worth is known for their stock yards.",childhood
+,RS,Yeah.,childhood
+,RP,"So that was my first one in Fort Worth. I think it was 3rd grade, yeah.",childhood
+,RS,"Were you ever like, ""I want to do that?""",childhood
+[00:16:54],RP,"No, I was like, ""Ew, what's this smell, it stinks. Can we leave?"" [laughs] So you know, you grow up and then you're like, ""Oh wow, oh okay. Why did I say that when I was younger?"" It's this funny thing when you're younger and you say things and then you're like oh never mind. So.",childhood
+[00:17:21],RS,That's fantastic. Well thank you so much for talking with me. I really appreciate it.,
