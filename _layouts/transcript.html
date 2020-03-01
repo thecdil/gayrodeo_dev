@@ -98,7 +98,7 @@ layout: default
           <td class="words">
             <div id="spoken">{{item.speaker | remove: ":"}}: {{item.words}}</div>
           </td>
-          <td class="timestamp">{%if item.timestamp%}<a target="_blank" href="https://youtu.be/{{ page.youtube }}?t={{item.timelink}}&cc_load_policy=1">{{item.timestamp}}</a>{% endif %}</td>
+          <td class="timestamp">{%if item.timestamp%}{{item.timestamp}}{% endif %}</td>
         </tr>
         {% endfor %}
         {% endif %}
