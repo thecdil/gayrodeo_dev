@@ -31,7 +31,7 @@ layout: default
     <div class="row mt-4">
 
       {% for clip in site.data.master-conversations %}
-      {% if clip.lastname == page.last-name %}
+      {% if clip.lastname == page.last-name and clip.firstname == page.first-name %}
       <div class="row">
         <div class="col-md-3">
           {% for conversation in site.data.conversation-filters %}
