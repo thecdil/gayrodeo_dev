@@ -13,7 +13,7 @@ date: 2019
 
 # library's domain (only changed if using github pages)
 url: https://thecdil.github.io # change to real domain when building: https://www.voicesofgayrodeo.com
-baseurl: # /gayrodeo_source
+baseurl: /gayrodeo_dev
 github_username: thecdil
 github_repository: https://github.com/thecdil/gayrodeo_dev
 # Collection's objects dir location
