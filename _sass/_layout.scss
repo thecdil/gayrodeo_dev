@@ -1,31 +1,30 @@
 /* Is any of this being used?? */
 
 /*
-.hiderow{display:none;} 
-  
 @media print {
     
-  html, body {
-    height:100%; 
-    margin: 0 !important; 
-    padding: 0 !important;
-    overflow-y: visible;
-    overflow-x: hidden;
-    display:block;
-  }
-
-  .transcript-content{
-      height:auto;
-      min-height:5000px;
-      overflow-y: visible;
-      overflow-x: hidden;
-      display:block;
-  }
-    
+    html, body {
+        height:100%; 
+        margin: 0 !important; 
+        padding: 0 !important;
+        overflow-y: visible;
+        overflow-x: hidden;
+        display:block;
+    }
+  
+    .transcript-content{
+        height:auto;
+        min-height:5000px;
+        overflow-y: visible;
+        overflow-x: hidden;
+        display:block;
+    }
+      
 }
+
+.hiderow{display:none;} 
       
 .carousel-item{height: 350px;overflow:hidden;}
-
 */
   
 
