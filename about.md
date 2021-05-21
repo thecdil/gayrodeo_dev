@@ -39,7 +39,7 @@ To see IGRA’s upcoming schedule see: <https://www.igra.com/CalendarRodeo.htm>
     <div class="col-md-3 text-center">
         {%- assign photo = p.indexid | append: '.jpg' -%}
         {% capture caption %}{{ p.name }}{% endcapture %}
-        {% include figure.html img=photo caption=p.name width="100%" %}
+        {% include figure.html img=photo caption=p.name %}
     </div>
     <div class="col-md-9 align-self-center">
         <strong>{{ p.name }}</strong> {{ p.description }}
