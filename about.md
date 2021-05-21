@@ -1,30 +1,31 @@
 ---
-layout: default
+layout: page-narrow
 title: About
-object-id: about
 ---
 
-<h1 class="py-2">About</h1>
+{:.py-2}
+# About
 
-Partnering with the International Gay Rodeo Association to collect and preserve people's experiences as LGBTQ+ westerners, this project seeks to protect endangered histories and relocate LGBTQ+ people back into the American West as people continue to build resilient communities.
+The Gay Rodeo Oral History Project was created in 2016 with the aid of a University of Idaho Seed Grant.
+Having conducted archival research on the International Gay Rodeo Association at the Autry Museum of the American West, I was struck by the precarious future of the association, the deep commitment of its members, and the rarity of public-facing projects engaged with rural LGBTQ+ communities.
+My initial grant helped fund the purchase of audio equipment and travel to seven rodeo events over the course of a year.
+In 2019, I also received a Whiting Foundation Public Humanities Project grant.
+This $50,000 grant helped fund training for six students who conducted oral histories and helped with transcription, tagging, and uploading these stories.
 
-The Gay Rodeo Oral History Project was created in 2016 with the aid of a University of Idaho Seed Grant which purchased basic equipment and funded travel to several rodeos over the course of a year. Having conducted archival research on the International Gay Rodeo Association at the Autry Museum of the American West, I was struck by the precarious future of the association, the deep commitment of its members, and the rarity of public-facing projects engaged with rural LGBTQ+ communities. I quickly discovered that interviewing at a rodeo presents its own special challenges. Rodeoers often have only 20 minutes to spare between bronc-riding and barrel-racing and rarely is there a place that provides optimal recording conditions. Wanting to capture people’s everyday experiences, I sought a wide cross-section of members: old-timers and newcomers; members of all sexual and gender identities; and competitors and organizers. 
+To date, our team has conducted more than 60 interviews with members of the International Gay Rodeo Association.
+We have recorded on hay bales, in hotel lobbies, and in the bleachers.
+We have stories as short as eight minutes and some almost three hours long.
+With the aid of the University of Idaho’s Center for Digital Inquiry and Learning, we have curated many of these interviews to highlight the points of convergence and departure that gay rodeoers experience.
+Over the next several years, we hope to continue to grow the oral history collection and this web exhibit.
 
-With the aid of University of Idaho’s [Center for Digital Inquiry and Learning](https://cdil.lib.uidaho.edu/){:target='_blank'}, we have curated many of these interviews in order to highlight the points of convergence and departure that gay rodeoers experience. 
+This project would not be possible without the tireless historical and organizational work conducted by IGRA’s leadership and royalty teams, and individuals like Frank Harrell, Roger Bergmann, Patrick Terry, Brian Helander, Candy Pratt, and so many more.
 
-Currently funded by the Whiting Foundation, student collaborators will be traveling to rodeos during the spring of 2020 to expand our oral history collection and, in turn, the stories available in this exhibit.
+For information on the history of gay rodeo see: <http://gayrodeohistory.org/>   
+To see IGRA’s upcoming schedule see: <https://www.igra.com/CalendarRodeo.htm>
 
-This project would not be possible without the tireless historical and organizational work conducted by IGRA’s leadership and royalty teams, and individuals like Frank Harrell, Roger Bergmann, Patrick Terry, and so many more.
-
-For information on the history of gay rodeo, see: [http://gayrodeohistory.org/](http://gayrodeohistory.org/){:target='_blank'}.
-
-For IGRA’s upcoming schedule, see: [https://www.igra.com/CalendarRodeo.htm](https://www.igra.com/CalendarRodeo.htm){:target='_blank'}.
-
-<div class="py-2"><strong>
-<p><em>Rebecca Scofield</em><br>  
-Assistant Professor of History<br>
-University of Idaho</p>
-</strong></div>  
+***Rebecca Scofield***  
+**Assistant Professor of History**  
+**University of Idaho**
 
 ---
 
@@ -32,6 +33,7 @@ University of Idaho</p>
 
 {%- assign people = site.data.people -%}
 {% for p in people %}
+{% if p.type == "faculty" %}
 
 <div class="row py-2">
     <div class="col-md-2 text-center">
@@ -43,6 +45,18 @@ University of Idaho</p>
         <strong>{{ p.name }}</strong> {{ p.description }}
     </div>
 </div>
-    
+{% endif %}
 {% endfor %}
 
+## Student Interns and Research Assistants
+{:.pb-2}
+
+- Renae Campbell
+- Revulai Detiv
+- Saraya Flaig
+- Dusty Fleener
+- Court Fund
+- Cameron Martin
+- Christine Packer
+- Kenwyn Richards
+- Jacob Rudd
