@@ -1,0 +1,155 @@
+/* index */
+
+.question {
+    margin:5px;
+    font-size:30px; 
+    font-family: 'Lobster', cursive;
+}
+
+.left-text-box {
+    position: relative;
+    background: #6c757d !important;
+    border-radius: .4em;
+}
+  
+.left-text-box:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 36px solid transparent;
+    border-top-color: #6c757d !important;
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -18px;
+    margin-bottom: -36px;
+  }
+
+.right-text-box {
+    position: relative;
+    background: #223e56;
+    border-radius: .4em;
+}
+      
+.right-text-box:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 36px solid transparent;
+    border-top-color: #223e56;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -18px;
+    margin-bottom: -36px;
+}
+
+/* index vertical ruler (timeline) for conversations */
+.timeline {
+    position: relative;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    @include media-query($on-palm) {
+        opacity:0;
+    }
+}
+
+/* interviews */
+
+.person-name {
+    margin:10px;
+    font-size:60px; 
+    a{color:black;}
+    font-family: 'Lobster', cursive;
+}
+
+.people-img-container {
+    max-width: 500px;
+}
+
+.people-img {
+    max-height: 500px;
+    overflow: hidden;
+}
+
+/* transcripts */
+td {
+    vertical-align: top;
+    padding:15px;
+}
+
+/* transcript */
+
+.timestamp {
+    font-size:10px;
+}
+
+.grey {
+  color: grey;
+  height: 3px;
+  width: 80%;
+  line-height: 2px;
+  float: left;
+  margin-bottom:1px; 
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.featured {
+    display: block;
+    float: none; 
+    clear: both;
+}
+
+.line {
+    display: block; 
+    font-size:8px; 
+    float:left;
+    width:100px;
+}
+
+.grey .words, .grey .timestamp, .grey .speaker, .grey .line {
+  display: inline;
+  font-size: 3px;
+  padding: 0px 5px;
+}
+
+.filteroptions, .searchinput {
+    font-size: 24px; 
+    @include media-query($on-palm) {
+        font-size:18px;
+    }
+}
+
+.notes-container{
+    list-style:disc;
+    li {
+        margin:10px 0px;
+    }
+}
+
+/* visualization */
+
+/* tooltip */
+.tooltip > .tooltip-inner {
+    font-size:16px;
+    max-width: 500px !important;
+    @include media-query($on-palm) {
+        max-width: 300px !important;
+        font-size:11px;
+    }
+}
