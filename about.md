@@ -15,7 +15,7 @@ This $50,000 grant helped fund training for six students who conducted oral hist
 To date, our team has conducted more than 60 interviews with members of the International Gay Rodeo Association.
 We have recorded on hay bales, in hotel lobbies, and in the bleachers.
 We have stories as short as eight minutes and some almost three hours long.
-With the aid of the University of Idaho’s Center for Digital Inquiry and Learning, we have curated many of these interviews to highlight the points of convergence and departure that gay rodeoers experience.
+With the aid of the University of Idaho’s [Center for Digital Inquiry and Learning](https://cdil.lib.uidaho.edu/){:target="_blank" rel="noopener"}, we have curated many of these interviews to highlight the points of convergence and departure that gay rodeoers experience.
 Over the next several years, we hope to continue to grow the oral history collection and this web exhibit.
 
 This project would not be possible without the tireless historical and organizational work conducted by IGRA’s leadership and royalty teams, and individuals like Frank Harrell, Roger Bergmann, Patrick Terry, Brian Helander, Candy Pratt, and so many more.
@@ -23,8 +23,9 @@ This project would not be possible without the tireless historical and organizat
 For information on the history of gay rodeo see: <http://gayrodeohistory.org/>   
 To see IGRA’s upcoming schedule see: <https://www.igra.com/CalendarRodeo.htm>
 
+{:.pt-3}
 ***Rebecca Scofield***  
-**Assistant Professor of History**  
+**Associate Professor of History**  
 **University of Idaho**
 
 ---
@@ -33,23 +34,24 @@ To see IGRA’s upcoming schedule see: <https://www.igra.com/CalendarRodeo.htm>
 
 {%- assign people = site.data.people -%}
 {% for p in people %}
-{% if p.type == "faculty" %}
 
 <div class="row py-2">
-    <div class="col-md-2 text-center">
+    <div class="col-md-3 text-center">
         {%- assign photo = p.indexid | append: '.jpg' -%}
         {% capture caption %}{{ p.name }}{% endcapture %}
         {% include figure.html img=photo caption=p.name width="100%" %}
     </div>
-    <div class="col-md-10 align-self-center">
+    <div class="col-md-9 align-self-center">
         <strong>{{ p.name }}</strong> {{ p.description }}
     </div>
 </div>
-{% endif %}
+
 {% endfor %}
 
+---
+
 ## Student Interns and Research Assistants
-{:.pb-2}
+{:.pb-3}
 
 - Renae Campbell
 - Revulai Detiv
@@ -60,3 +62,4 @@ To see IGRA’s upcoming schedule see: <https://www.igra.com/CalendarRodeo.htm>
 - Christine Packer
 - Kenwyn Richards
 - Jacob Rudd
+{:.pb-3}
