@@ -1,24 +1,12 @@
 <!doctype html>
 <html lang="en">
 
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-  {% include head.html %}
-</head>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    {% include head.html %}
+  </head>
 
-<body>
-
-  {% include sidebar.html %}
-
-  {% include site-navbanner.html %}
-  <main role="main">
-    <div class="container">
-      {{ content }}
-    </div>
-  </main>
-  {% include footer.html %}
-  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-  {% include foot.html %}
-
-</body>
+  <body>
+    {{ content }}
+  </body>
 
 </html>
