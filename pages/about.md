@@ -1,6 +1,7 @@
 ---
 layout: page-narrow
 title: About
+permalink: /about.html
 ---
 
 {:.py-2}

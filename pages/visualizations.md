@@ -2,6 +2,7 @@
 layout: visualization
 title: Visualizations
 object-id: visualizations
+permalink: /visualizations.html
 ---
 
 ## Visualize by subject
