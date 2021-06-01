@@ -54,6 +54,8 @@ To see IGRA’s upcoming schedule see: <https://www.igra.com/CalendarRodeo.htm>
 ## Student Interns and Research Assistants
 {:.pb-3}
 
+<div class="row">
+<div class="col-md-4" markdown="1">
 - Renae Campbell
 - Revulai Detiv
 - Saraya Flaig
@@ -63,4 +65,9 @@ To see IGRA’s upcoming schedule see: <https://www.igra.com/CalendarRodeo.htm>
 - Christine Packer
 - Kenwyn Richards
 - Jacob Rudd
-{:.pb-3}
+{:.pt-4}
+</div>
+<div class="col-md-8" markdown="1">
+{% include figure.html img="/team/gayrodeo-students.jpg" caption="Student Interns at an IGRA Convention" %}
+</div>
+</div>
