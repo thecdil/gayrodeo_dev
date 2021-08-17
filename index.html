@@ -1,40 +1,6 @@
 ---
 layout: homepage
 ---
-
-{% for conversation in site.data.conversation-filters %}
-<div id="convo-{{forloop.index}}"></div>
-<script id="{{conversation.tag}}" type="html">
-    <div class="container-fluid timeline mb-5 {% unless forloop.first %}mt-5{% endunless %}">
-        <div class="row">
-            <div class="card col-md-4 offset-md-6 border-0 bg-dark" style="margin-top:-10px;">
-                <h1 class="text-white bg-dark border-0 {{ conversation.tag }}" style="font-size:47px;">{{ conversation.question }}</h1>
-            </div>
-        </div>
-    
-        {% for clip in site.data.master-conversations %}
-        {% if clip.tag contains conversation.tag %}
-        
-            <div class="row {{conversation.tag}} my-4">
-                <div class="{{clip.tag}} card col-md-4 my-3 my-md-0 border border-secondary text-white {% cycle 'offset-md-2 bg-secondary  left-text-box ', 'offset-md-6 right-text-box ' %}" data-aos="{% cycle  'zoom-in-right', 'zoom-in-left'%}">
-                    <div class="card-body">
-                        {% if clip.search %}
-                            <p class="card-text"><a class="text-white clip" href="interviews/transcripts/{{clip.lastname | downcase}}{{clip.firstname | downcase}}.html#{{ clip.search | url_param_escape }}">{{clip.comments }}</a></p>
-                            <h3 class="text-right">-<a class="text-light" href="interviews/{{clip.lastname | downcase}}{{clip.firstname | downcase}}.html">{{clip.firstname}} {{clip.lastname}}</a></h3>
-                            {% else %}
-                            <p class="card-text">{{clip.comments}}</p>
-                            <h3 class="text-right">-{{clip.firstname}} {{clip.lastname}}</h3>
-                        {% endif %}
-                    </div>
-                </div>      
-            </div>        
-        
-        {%endif%}
-        {%endfor%}
-        
-    </div>  
-</script>
-{%endfor%}
               
 <div class="row justify-content-center">
     <div class="col-md-3 text-center">
