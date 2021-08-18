@@ -2,16 +2,28 @@
 layout: default
 ---
 
-<header class="hero">
-  {% include header.html %}
-</header>
+<style>
+  body {
+    background: no-repeat fixed;
+    background-size: cover;
+  }
+</style>
 
-<div class="page-content">
-  <div class="wrapper">
-    {{ content }}
-  </div>
-</div>
+{% include header.html %}
+
+{{ content }}
 
 {% include footer.html %}
 {% include foot.html %}
 {% include js/morebutton-js.html %}
+
+<script>
+  function random_item(items)
+    {return items[Math.floor(Math.random()*items.length)]; }
+    var arr = ['bg001', 'bg002', 'bg003', 'bg004', 'bg005', 'bg006'];
+    var value = random_item(arr);
+    document.body.style.backgroundImage = 'url(images/bg/' + (value) + '.jpg)';
+    arr = arr.filter(function(item) { 
+  return item !== value
+})
+</script>
