@@ -2,34 +2,28 @@
 layout: default
 ---
 
-{% include sidebar.html %}
+<style>
+  body {
+    background: no-repeat fixed;
+    background-size: cover;
+  }
+</style>
 
-<div class="backgrounds overlay">
-  <div class="background aos-init aos-animate" data-aos="fade-in" data-aos-duration="1500" data-aos-anchor=".section--hero" id="homeback"></div>
-</div>
+{% include header.html %}
 
-<header class="hero">
-  {% include site-navbanner.html %}
-</header>
-
-<div class="page-content">
-  <div class="wrapper">
-    {{ content }}
-  </div>
-</div>
+{{ content }}
 
 {% include footer.html %}
-<label for="sidebar-checkbox" class="sidebar-toggle"></label>
 {% include foot.html %}
 {% include js/morebutton-js.html %}
 
 <script>
-    function random_item(items)
-  {return items[Math.floor(Math.random()*items.length)]; }
-  var arr = ['bg001', 'bg002', 'bg003', 'bg004', 'bg005', 'bg006'];
-  var value = random_item(arr);
-  document.getElementById('homeback').style.backgroundImage = 'url(images/bg/' + (value) + '.jpg)';
-  arr = arr.filter(function(item) { 
-    return item !== value
-  })
+  function random_item(items)
+    {return items[Math.floor(Math.random()*items.length)]; }
+    var arr = ['bg001', 'bg002', 'bg003', 'bg004', 'bg005', 'bg006'];
+    var value = random_item(arr);
+    document.body.style.backgroundImage = 'url(images/bg/' + (value) + '.png)';
+    arr = arr.filter(function(item) { 
+  return item !== value
+})
 </script>
