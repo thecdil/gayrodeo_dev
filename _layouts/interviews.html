@@ -36,13 +36,13 @@ layout: page
         <div class="col-md-3">
           {% for conversation in site.data.conversation-filters %}
           {% if clip.tag contains conversation.tag %}
-          <h4 class="text-right question mt-5">{{conversation.question}}</h4>
-          {%endif%} {%endfor%}
+          <h4 class="text-right question mt-5">{{ conversation.question }}</h4>
+          {% endif %} {% endfor %}
         </div>
         <div class="col-md-9">
           <div class="{{clip.tag}} card col-md-6 my-5 border border-secondary text-white {% cycle 'offset-md-4 bg-secondary  left-text-box ', 'offset-md-3 right-text-box ' %}" data-aos="{% cycle  'zoom-in-right', 'zoom-in-left'%}">
             <div class="card-body">
-              <p class="card-text"><a class="text-white clip" href="transcripts/{{clip.lastname | downcase}}{{clip.firstname | downcase}}.html#{{ clip.search | url_param_escape }}">{{clip.comments }}</a> </p>
+              <p class="card-text"><a class="text-white clip" href="transcripts/{{clip.lastname | downcase}}{{clip.firstname | downcase}}.html#{{ clip.search | url_param_escape }}">{{ clip.comments }}</a> </p>
               <h3 class="text-right">-<a class="text-info" href="{{clip.lastname | downcase}}{{clip.firstname | downcase}}.html">{{clip.firstname}} {{clip.lastname}}</a></h3>
             </div>
           </div>
