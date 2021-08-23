@@ -3,3 +3,27 @@ body {
     font-family:'Noto Sans TC', Helvetica, arial, sans-serif;
     overflow-x: hidden;
 }
+
+#wrapper {
+    overflow-x: hidden;
+}
+
+a {
+    color:#112e51;
+}
+
+/* navbar */
+.site-title {
+    font-family: 'Lobster', cursive;
+    font-size: 45px;
+}
+
+.dropdown-item {
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+}
+
+.nav-link {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+}
