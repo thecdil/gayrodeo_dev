@@ -1,8 +1,13 @@
 /* index */
 
+.conversation {
+    font-family: 'Crimson Text', serif;
+    font-size: 47px;
+}
+
 .left-text-box {
     position: relative;
-    background: #6c757d !important;
+    background: #494440 !important;
     border-radius: .4em;
 }
   
@@ -14,7 +19,7 @@
     width: 0;
     height: 0;
     border: 36px solid transparent;
-    border-top-color: #6c757d !important;
+    border-top-color: #494440 !important;
     border-bottom: 0;
     border-left: 0;
     margin-left: -18px;
@@ -60,6 +65,16 @@
     @include media-query($on-palm) {
         opacity:0;
     }
+}
+
+.question {
+    font-family: 'Crimson Text', serif;
+    font-size: 25px;
+}
+
+.name {
+    font-family: 'Crimson Text', serif;
+    font-size: 30px;
 }
 
 /* interviews */
