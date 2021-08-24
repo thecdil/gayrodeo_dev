@@ -4,7 +4,7 @@ title: About
 permalink: /about.html
 ---
 
-{:.py-2}
+{:.pt-5 .pb-2}
 # About
 
 The Gay Rodeo Oral History Project was created in 2016 with the aid of a University of Idaho Seed Grant.

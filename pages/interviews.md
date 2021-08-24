@@ -6,4 +6,4 @@ permalink: interviews/
 ---
 ## Interviews
 
-{%include transcript-list.html%}
+{% include transcript-list.html %}

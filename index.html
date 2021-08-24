@@ -1,27 +1,7 @@
 ---
 layout: homepage
+title: Home
 ---
-
-<style>
-    .conversation {
-        font-family: 'Crimson Text', serif;
-        font-size: 47px;
-    }
-    .left-text-box {
-        background: #494440 !important;
-    }
-    .left-text-box:after {
-        border-top-color: #494440 !important;
-    }
-    .words {
-        font-family: 'Crimson Text', serif;
-        font-size: 25px;
-    }
-    .name {
-        font-family: 'Crimson Text', serif;
-        font-size: 30px;
-    }
-</style>
 
 {% for conversation in site.data.conversation-filters %}
 <div id="convo-{{ forloop.index }}"></div>
@@ -40,11 +20,11 @@ layout: homepage
                 <div class="{{ clip.tag }} card col-md-4 my-3 my-md-0 border border-secondary text-white {% cycle 'offset-md-2 left-text-box ', 'offset-md-6 right-text-box ' %}" data-aos="{% cycle 'zoom-in-right', 'zoom-in-left'%}">
                     <div class="card-body">
                         {% if clip.search %}
-                            <p class="card-text words"><a class="text-white clip" href="interviews/transcripts/{{ clip.lastname | downcase }}{{ clip.firstname | downcase }}.html#{{ clip.search | url_param_escape }}">{{ clip.comments }}</a></p>
-                            <h3 class="text-right name">-<a class="text-light" href="interviews/{{ clip.lastname | downcase }}{{ clip.firstname | downcase }}.html">{{ clip.firstname }} {{ clip.lastname }}</a></h3>
+                            <p class="card-text question"><a class="text-white clip" href="interviews/transcripts/{{ clip.lastname | downcase }}{{ clip.firstname | downcase }}.html#{{ clip.search | url_param_escape }}">{{ clip.comments }}</a></p>
+                            <p class="text-right name">-<a class="text-light" href="interviews/{{ clip.lastname | downcase }}{{ clip.firstname | downcase }}.html">{{ clip.firstname }} {{ clip.lastname }}</a></p>
                             {% else %}
                             <p class="card-text words">{{ clip.comments }}</p>
-                            <h3 class="text-right name">-{{ clip.firstname }} {{ clip.lastname }}</h3>
+                            <p class="text-right name">-{{ clip.firstname }} {{ clip.lastname }}</p>
                         {% endif %}
                     </div>
                 </div>      

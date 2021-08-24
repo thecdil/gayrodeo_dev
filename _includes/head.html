@@ -3,20 +3,18 @@
 <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
 <link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | absolute_url }}">
 <meta http-equiv="Content-Language" content="en-us" >
-{% if page.layout == "page" %}{% include page-meta.html %}{%- endif -%}
-{% if page.layout == "item" %}{% include item-meta.html %}{%- endif -%}
 
+{% include head/page-meta.html %}
+
+<!-- load style sheets -->
 {% if page.layout == "homepage" %}<link rel="stylesheet" href="{{ '/assets/css/aos.css' | absolute_url }}">{%- endif -%}
 
-<link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | absolute_url }}" type="text/css">
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | absolute_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}" type="text/css">
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+<script defer src="{{ '/assets/lib/fontawesome-free/js/all.min.js' | relative_url }}"></script>
+
+<!-- load google fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&family=Lobster&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=IM+Fell+Great+Primer+SC&family=Lobster&display=swap" rel="stylesheet"> 
-
-{% if jekyll.environment != "server" %}
-<meta name="robots" content="noindex">
-{% else %}
-{% include matomo-analytics.html %}
-{% endif %}
