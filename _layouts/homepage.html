@@ -2,6 +2,12 @@
 layout: default
 ---
 
+<style>
+body {
+  background-image: url('images/bg/bg005.png');
+}
+</style>
+
 {% include header.html %}
 
 {{ content }}
@@ -9,14 +15,3 @@ layout: default
 {% include footer.html %}
 {% include foot.html %}
 {% include js/morebutton-js.html %}
-
-<script>
-  function random_item(items)
-    {return items[Math.floor(Math.random()*items.length)]; }
-    var arr = ['bg001', 'bg002', 'bg003', 'bg004', 'bg005', 'bg006'];
-    var value = random_item(arr);
-    document.body.style.backgroundImage = 'url(images/bg/' + (value) + '.png)';
-    arr = arr.filter(function(item) { 
-  return item !== value
-})
-</script>

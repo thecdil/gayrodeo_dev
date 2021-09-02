@@ -1,4 +1,4 @@
-<footer class="navbar nav-light bg-light mt-0 py-0 b-0">
+<footer class="navbar nav-light bg-light mt-0 py-0 b-0 justify-content-center">
   <div class="row py-1">
     <div class="col-md-4 pl-5 pt-4 align-self-center">
       <a class="h3 text-dark site-title" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
@@ -11,9 +11,9 @@
     <div class="col-md-4 align-self-center text-center">
       <p class="mb-0 pt-4">Design and Development:</p>
       <div class="pt-1">
-        <a href="https://cdil.lib.uidaho.edu/" target="_blank" rel="noopener"><img src="{{ 'images/logos/cdil.png' | absolute_url }}" alt="Center for Digital Inquiry and Learning (CDIL) logo" class="w-50"></a>
+        <a href="https://cdil.lib.uidaho.edu/" target="_blank" rel="noopener"><img src="{{ 'images/logos/cdil.png' | relative_url }}" alt="Center for Digital Inquiry and Learning (CDIL) logo" class="w-50"></a>
       </div>
-      <hr />
+      <hr class="d-none d-sm-block">
       <p class="pl-3">
         <a class="social-icon" href="https://github.com/uidaholib/gayrodeo_source" title="Facebook Link" target="_blank" rel="noopener"><span class="social-icon-footer">{% include social-icon.html icon="GitHub" %}</span><span class="sr-only">GitHub</span></a>
         <a class="social-icon" href="https://www.facebook.com/voicesofgayrodeo" title="Facebook Link" target="_blank" rel="noopener"><span class="social-icon-footer">{% include social-icon.html icon="Facebook" %}</span><span class="sr-only">Facebook</span></a>
@@ -23,7 +23,7 @@
     <div class="col-md-4 align-self-center text-center pb-4">
       <p class="mb-0 pt-2">Supported by: </p>
       <div class="py-3">
-          <a href="https://www.whiting.org/" target="_blank" rel="noopener"><img src="{{ 'images/logos/whiting.png' | absolute_url }}" alt="Whiting Foundation logo" style="width:40%"></a>
+          <a href="https://www.whiting.org/" target="_blank" rel="noopener"><img src="{{ 'images/logos/whiting.png' | relative_url }}" alt="Whiting Foundation logo" style="width:40%"></a>
       </div>
       <div class="pt-3">
         <a href="https://www.uidaho.edu/" target="_blank" rel="noopener"><img src="{{ 'images/logos/uidaho.png' | relative_url }}" alt="University of Idaho logo" style="width:40%"></a>
