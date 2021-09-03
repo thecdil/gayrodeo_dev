@@ -1,8 +1,8 @@
 /* index */
 
 .conversation {
-    font-family: 'Crimson Text', serif;
-    font-size: 47px;
+    font-family: 'Lato', serif;
+    font-size: 40px;
 }
 
 .left-text-box {
@@ -68,13 +68,13 @@
 }
 
 .question {
-    font-family: 'Crimson Text', serif;
-    font-size: 25px;
+    font-family: 'Lato', serif;
+    font-size: 21px;
 }
 
 .name {
-    font-family: 'Crimson Text', serif;
-    font-size: 30px;
+    font-family: 'Lato', serif;
+    font-size: 22px;
 }
 
 /* interviews */
@@ -116,10 +116,13 @@ td {
 }
 
 .featured {
-    display: block;
+    display: inline-flex;
     float: none; 
     clear: both;
 }
+
+.anchored-highlight{background:aquamarine;}
+
 
 .line {
     display: block; 
