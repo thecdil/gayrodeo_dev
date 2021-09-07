@@ -42,8 +42,8 @@ layout: page
         <div class="col-md-9">
           <div class="{{clip.tag}} card col-md-6 my-5 border border-secondary text-white {% cycle 'offset-md-4 bg-secondary  left-text-box ', 'offset-md-3 right-text-box ' %}" data-aos="{% cycle  'zoom-in-right', 'zoom-in-left'%}">
             <div class="card-body">
-              <p class="card-text"><a class="text-white clip" href="transcripts/{{clip.lastname | downcase}}{{clip.firstname | downcase}}.html#{{ clip.search | url_param_escape }}">{{ clip.comments }}</a> </p>
-              <h3 class="text-right">-<a class="text-info" href="{{clip.lastname | downcase}}{{clip.firstname | downcase}}.html">{{clip.firstname}} {{clip.lastname}}</a></h3>
+              <p class="card-text"><a class="text-white clip" href="transcripts/{{clip.lastname | downcase}}{{clip.firstname | downcase}}.html?q={{ clip.search | url_param_escape }}">{{ clip.comments }}</a> </p>
+              <p class="text-right h5">-{{clip.firstname}} {{clip.lastname}}</p>
             </div>
           </div>
         </div>
@@ -65,9 +65,9 @@ layout: page
             {% assign rect-width = 100 | divided_by: my_float  %}
             {%if forloop.first%}<text x="0" y="0" style="font-size:30px;">Browse Interview by Subject</text>
             <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}"></rect>
-            {%else %} <a href="{{ item.words | truncatewords: 5,'' | url_param_escape | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}">
+            {%else %} <a href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}">
               <rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}"></rect>
-            </a>
+              </a>
             {%endif%}{%endfor%}
           </svg>
           <br />
@@ -75,7 +75,7 @@ layout: page
           {%endfor%}
           {% if page.object-id != "all" %}
           <br />
-          <p> Click below to filter the visualization by subject.</p>
+          <p> Click below to filter the visualization by subject. <button id="reset" class="btn btn-outline-dark ml-4">Reset</button></p>
           <br />
 
           {%include visualization-filter-legend.html %}

@@ -7,7 +7,7 @@ title: Home
 <div id="convo-{{ forloop.index }}"></div>
 <script id="{{ conversation.tag }}" type="html">
     <div class="row justify-content-center">
-        <div class="card col-md-4 border-0 bg-dark mt-5">
+        <div class="card col-md-4 border-0 bg-dark mt-5 mb-3">
             <h1 class="text-white bg-dark border-0 conversation py-3 px-3 text-center {{ conversation.tag }}">{{ conversation.question }}</h1>
         </div>
     </div>
@@ -20,7 +20,7 @@ title: Home
                 <div class="{{ clip.tag }} card col-md-4 my-3 my-md-0 border border-secondary text-white {% cycle 'offset-md-2 left-text-box ', 'offset-md-6 right-text-box ' %}" data-aos="{% cycle 'zoom-in-right', 'zoom-in-left'%}">
                     <div class="card-body">
                         {% if clip.search %}
-                            <p class="card-text question"><a class="text-white clip" href="interviews/transcripts/{{ clip.lastname | downcase }}{{ clip.firstname | downcase }}.html#{{ clip.search | url_param_escape }}">{{ clip.comments }}</a></p>
+                            <p class="card-text question"><a class="text-white clip" href="interviews/transcripts/{{ clip.lastname | downcase }}{{ clip.firstname | downcase }}.html?q={{ clip.search | url_param_escape }}">{{ clip.comments }}</a></p>
                             <p class="text-right name">-<a class="text-light" href="interviews/{{ clip.lastname | downcase }}{{ clip.firstname | downcase }}.html">{{ clip.firstname }} {{ clip.lastname }}</a></p>
                             {% else %}
                             <p class="card-text words">{{ clip.comments }}</p>
