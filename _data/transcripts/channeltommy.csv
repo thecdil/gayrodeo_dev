@@ -22,7 +22,7 @@ timestamp,speaker,words,tags
 [00:02:24],RC,"Okay. And then, what did you do after college?",
 [00:02:28],TC,"After college, well, after that business college, my first real job that I call an extended job was for an export company, actually. They're in Nacogdoches. We exported to Saudi Arabia—to the oilfields in Saudi Arabia back in the mid- ‘70s.",jobs
 [00:02:51],RC,"Okay. And growing up, did you go to many rodeos? Was that part of your upbringing?",
-,TC,"We did. That was—that was a pretty good—pretty much the pastime back out in the country in east Texas. A lot of rodeoing, country rodeos, yes.",childhood
+,TC,"We did. That was—that was a pretty good—pretty much the pastime back out in the country in east Texas. A lot of rodeoing, country rodeos, yes.",childhood;rodeo
 [00:03:05],RC,And were you involved in them?,
 ,TC,"I was not at the time, no.",
 ,RC,Okay. How did you find out about IGRA?,
@@ -34,22 +34,22 @@ timestamp,speaker,words,tags
 [00:04:19],RC,"And did you have a very supportive community there, with you at that time?",
 [00:04:22],TC,"My family is very supportive. In the day—in those late ‘70s, by this time—mid- to late ‘70s—it wasn't something you talked about. Families know; mothers know. I think mothers know from adolescence. It's just—I think it's an instinct.",family;comingout
 [00:04:51],RC,"So, then, it was your friends there in Houston that introduced you to IGRA events?",
-[00:04:58],TC,"Correct. My first IGRA event was in Houston, Texas. In, um, ‘80…. Wow, can't remember. ‘80 something—the early ‘80s. And I didn't know anybody at the event. I just heard about it. Maybe I saw a poster or something at a bar or read about it, maybe somewhere that I had been. I don't remember how I heard about it. But I went, and I didn't know anyone. I didn't know a soul. But I was so intrigued, watching these events that were so—some of them—foreign.",events;highlight
+[00:04:58],TC,"Correct. My first IGRA event was in Houston, Texas. In, um, ‘80…. Wow, can't remember. ‘80 something—the early ‘80s. And I didn't know anybody at the event. I just heard about it. Maybe I saw a poster or something at a bar or read about it, maybe somewhere that I had been. I don't remember how I heard about it. But I went, and I didn't know anyone. I didn't know a soul. But I was so intrigued, watching these events that were so—some of them—foreign.",events;highlight;igra
 ,TC,"Some of them were just rodeo events like, you know, bronc riding, bull riding, and roping—those kind of things. But they did something so unusual that I had never seen before, like a drag race, and the goat dressing, and wild drag. Those events were foreign. Something I'd never seen before. And to these people, it was—they were having fun. They were really fun. And guess what? I wanted, I wanted to be a part of it. [laughs] So, I did what I needed to do, and met some people, and said, “How do I—how do I do this?” And that's what we did.",events;highlight
 [00:06:19],RC,"So then did you go—uh, what was the next one that you went to? Did you immediately start attending?",
-,TC,"The next—the next event was in Denver, Colorado. The next gay rodeo was in Denver, Colorado. And, um, that's when I fell in love with Denver.",
+,TC,"The next—the next event was in Denver, Colorado. The next gay rodeo was in Denver, Colorado. And, um, that's when I fell in love with Denver.",rodeo
 ,RC,"And did you participate in that one? Or did you just, um…?",
 ,TC,"Not in the first one, no. But it was probably the next one or so. I ran right out and bought myself a horse—yeah. And my little horse’s name was Sassafras. Nicknamed Sassy, after myself, of course. And we did barrels, poles, flags—the horse events. And we, we just blended right in.",events
 [00:07:12],RC,"So, did you do more events than that, or are those primarily…?",
 ,TC,"Those were the primary. The camp events, and the wild drag, and the goat dressing, and […] steer decorating, now, I did those as well. Yeah, I did. I never rode a bull, never rode a bronc—no.",events
 [00:07:34],RC,Did you have a favorite of those events?,
-[00:07:37],TC,"Oh, absolutely. Absolutely! My horse and I, our favorite event was flag race for sure. We loved running flags.",events
+[00:07:37],TC,"Oh, absolutely. Absolutely! My horse and I, our favorite event was flag race for sure. We loved running flags.",events;competition
 [00:07:49],RC,And did you…?,
 ,TC,A couple buckles? Yeah.,
-,RC,Yeah? How did you know what I was gonna ask? [laughs],
+,RC,Yeah? How did you know what I was gonna ask? [laughs],awards
 [00:07:53],TC,[laughs] Huh? Yeah. I sport a couple of buckles in that event.,
 [00:07:59],RC,Nice. And then have you been pretty consistently involved since that time?,
-[00:08:01],TC,"I have been very involved since then. I have been president of the Colorado Gay Rodeo Association four terms, and I've been a rodeo director for CGRA, the Colorado group, I believe, three times. I've been rodeo director for the International Finals Rodeo twice—two different times. And just last year was my—I think it was my fourth term as president here, which ended in September of this year. And I have been a Mr. IGRA in 1997—I think. I think that's the year. [laughs] And that was a huge accomplishment, something to be proud of, I'm proud of. To be recognized by your peers is always a good thing. And, um….",
+[00:08:01],TC,"I have been very involved since then. I have been president of the Colorado Gay Rodeo Association four terms, and I've been a rodeo director for CGRA, the Colorado group, I believe, three times. I've been rodeo director for the International Finals Rodeo twice—two different times. And just last year was my—I think it was my fourth term as president here, which ended in September of this year. And I have been a Mr. IGRA in 1997—I think. I think that's the year. [laughs] And that was a huge accomplishment, something to be proud of, I'm proud of. To be recognized by your peers is always a good thing. And, um….",igra;royaltycompetition
 [00:09:06],RC,"So, it sounds like you've done the rodeo events, you've also been part of royalty, and you've been part of the administration so to speak.",
 [00:09:18],TC,"Currently—I am currently—the administrative assistant. I'm the only paid employee of the International Association. And so, I'm very involved currently. Still in the in the International Association and with CGRA. I helped produce this weekend's event here: Convention.",jobs
 [00:09:39],RC,Congratulations on pulling that off.,
@@ -61,7 +61,7 @@ timestamp,speaker,words,tags
 [00:10:00],RC,"And in all the different roles that you have served, do you think that there are—do you think that you've seen a good cross-section of…?",
 [00:10:09],TC,"Oh, absolutely. Going from a contestant to administration and production of the event that I love so much, it's a huge spectrum to cross. And I've enjoyed every minute of it; every event that I participate in, I love.",highlight
 [00:10:34],RC,"Nice. So, what do you think makes IGRA different from, say, the rodeos that you participated in—or saw—as a kid?",
-[00:10:43],TC,"Hmm. Well, for one thing, we—the interaction from association to association, state to state, becomes a family affair—a huge social event. And it's exciting to see friends and people that you consider family at this point, you know, a few times a year. Just like you—just like I go home to see my blood family. These people are my family. I love them dearly and appreciate their contributions, you know, to our society. We have doctors, lawyers, nurses, practitioners, veterinarians in our group, schoolteachers, you name it. Sexuality has no boundaries. And it's, it's a beautiful family.",family;community;highlight
+[00:10:43],TC,"Hmm. Well, for one thing, we—the interaction from association to association, state to state, becomes a family affair—a huge social event. And it's exciting to see friends and people that you consider family at this point, you know, a few times a year. Just like you—just like I go home to see my blood family. These people are my family. I love them dearly and appreciate their contributions, you know, to our society. We have doctors, lawyers, nurses, practitioners, veterinarians in our group, schoolteachers, you name it. Sexuality has no boundaries. And it's, it's a beautiful family.",family;community;highlight;igra
 [00:11:59],RC,Nice. Um…Yeah. That's a lovely statement.,
 ,TC,"Well, thank you. It was not rehearsed.",
 ,RC,"It just came out that way. Yeah. So, have you ever been at one of the events where there were—it sounds like you've been on a lot of them—where they were protesting?",
@@ -75,7 +75,7 @@ timestamp,speaker,words,tags
 ,RC,[laughs] To that effect?,
 ,TC,"[laughs] “I was country when country wasn't cool.” And so, anyway, so, yeah. Things have changed. Social media has changed our way of life drastically. You, you used to have a social outlet, that was the bars, that we don't have to experience anymore. You pick up your phone and get a date.",
 [00:15:06],RC,"So, do you think that a lot of word of mouth for IGRA came from different bars?",
-[00:15:10],TC,"Absolutely, absolutely. Personal interaction was a big… oh, what’s the word? Medium, I guess. You know, that's—a lot of people heard about it from you talking about it in a bar or club atmosphere. And we don't see that anymore. Where we used to go into a bar here in town, in Denver, there’d be a sea of cowboy hats—doesn't happen anymore, sadly. And I miss those days. ‘Course I'm 64 years old now. I was 34 back then.",
+[00:15:10],TC,"Absolutely, absolutely. Personal interaction was a big… oh, what’s the word? Medium, I guess. You know, that's—a lot of people heard about it from you talking about it in a bar or club atmosphere. And we don't see that anymore. Where we used to go into a bar here in town, in Denver, there’d be a sea of cowboy hats—doesn't happen anymore, sadly. And I miss those days. ‘Course I'm 64 years old now. I was 34 back then.",igra
 ,RC,Do you ever wear your cowboy hat anymore?,
 ,TC,"Oh, yeah. Still do. Still do. Love my hats.",
 [00:16:02],RC,"[laughs] So, do you consider—would you say that you dress in sort of a Western way?",
@@ -87,7 +87,7 @@ timestamp,speaker,words,tags
 [00:16:30],RC,Yeah. I can see how a cowboy hat might not work.,
 ,TC,Yeah. It gets hot.,
 [00:16:35],RC,"And then you've also said that you're currently the, um, …?",
-[00:16:39],TC,"The administrative assistant for IGRA, yes. And that's a very focused job on IGRA. So, I handle all of the insurance needs, anything that the president needs from me, you know, um, to assist with. Whatever they may need, you know, me to do as far as, mostly insurance. I make sure that all of our events are properly insured, and our stock contractors are all properly insured.",jobs
+[00:16:39],TC,"The administrative assistant for IGRA, yes. And that's a very focused job on IGRA. So, I handle all of the insurance needs, anything that the president needs from me, you know, um, to assist with. Whatever they may need, you know, me to do as far as, mostly insurance. I make sure that all of our events are properly insured, and our stock contractors are all properly insured.",jobs;igra
 [00:17:14],RC,How much time do you say that you—would you say that you—dedicate towards that a year?,
 [00:17:20],TC,"It varies. It varies. The summer months are busier when there’s more rodeos than in the spring. You know, our finals are in the fall. It's very busy. So, it just varies from month to month.",jobs
 ,RC,"And you've been doing that for a while, have you not?",
@@ -101,7 +101,7 @@ timestamp,speaker,words,tags
 ,RC,I’m sorry.,
 ,TC,His name was Wayne Jakino. Have you heard that name before?,mentor
 ,RC,"I have heard that name before, yes.",
-[00:18:55],TC,"He was a very special person that was instrumental in starting this organization back in the early ‘80s. If I had to look up to somebody, it would probably have been him. I didn't know him personally. Sounds like other people have mentioned him as well?",mentor
+[00:18:55],TC,"He was a very special person that was instrumental in starting this organization back in the early ‘80s. If I had to look up to somebody, it would probably have been him. I didn't know him personally. Sounds like other people have mentioned him as well?",mentor;igra
 ,RC,"Yeah, well, I've heard his name from Patrick a number of times too.",
 ,TC,"Well, there you go. Okay, good.",
 ,RC,Yep. It's too bad we can't interview him.,
@@ -111,7 +111,7 @@ timestamp,speaker,words,tags
 ,RC,"Yeah, that would be great. So, do you have some favorite aspects of IGRA?",
 ,TC,Favorite aspect? Uh….,
 ,RC,"You know, like… I think you talked about the difference between IGRA rodeos and other ones. But, you know, is there something that keeps bringing you back into the fold with it? That keeps you so heavily involved?",
-[00:20:08],TC,"Well, I think, I think there’s a very simple answer to that: It's my family. And I just—I would not be complete without this group of people. That's what keeps me around. I love the events. I love, you know, World Gay Rodeo Finals in the fall every year is a special event that I'm very fond of, and I take very personal interest in. And I have been involved with the production of that event for, oh, probably, going on 15 years.",community
+[00:20:08],TC,"Well, I think, I think there’s a very simple answer to that: It's my family. And I just—I would not be complete without this group of people. That's what keeps me around. I love the events. I love, you know, World Gay Rodeo Finals in the fall every year is a special event that I'm very fond of, and I take very personal interest in. And I have been involved with the production of that event for, oh, probably, going on 15 years.",community;igra;events
 ,RC,"So, do you always make that event every year?",
 ,TC,"Every year. Every year, yeah. Because I'm usually in some portion of production. Even if it is just providing the branded merchandise. I get involved with buckle designs often. For several years I have handled buckle designs. This past year, worked very, very closely with another team member and handed it off to her because I was so busy. She does a fantastic job—so maybe I mentored her now that I think about it. So, yeah, that's always a, uh, that's always an enjoyable task for me as well. Because I love design and things like that.",mentor
 ,RC,I've seen a number of those buckles on the website and….,
@@ -129,13 +129,13 @@ timestamp,speaker,words,tags
 ,RC,As the name would suggest.,
 ,TC,As the name would suggest.,
 [00:24:21],RC,"Do you have a favorite rodeo that you've been to, since you've been to so many? Or are there several that kind of...?",
-[00:24:32],TC,"Well, okay. That's a great question. And I have a great answer. We produced a gay rodeo for Gay Games in Cleveland, Ohio. Well, Gay Games was in Cleveland, Ohio. The rodeo we produce was in Akron during Gay Games…. What year? What year was it? Oh, my goodness…. We're gonna have to find that out.",
+[00:24:32],TC,"Well, okay. That's a great question. And I have a great answer. We produced a gay rodeo for Gay Games in Cleveland, Ohio. Well, Gay Games was in Cleveland, Ohio. The rodeo we produce was in Akron during Gay Games…. What year? What year was it? Oh, my goodness…. We're gonna have to find that out.",events;rodeo
 ,RC,K.,
 ,TC,"It was a few years ago, maybe four or five years ago. It was a life changing experience to produce an event that was attended—not so much contestant-wise, but spectator-wise—to have the stands filled. Filled with countries, delegations from other, you know, from parts of the world. It was a life changing experience to be part of the opening ceremonies of an Olympic event. It really, it really was an incredible time.",
 [00:25:53],RC,Do you think that helped grow your membership at all? Is that…?,
 [00:25:56],TC,"I'm not sure that it did. We hoped. But the base of spectator there was, was a worldwide base. So I'm not—I don't know if it did. But it certainly exposed us. We, uh, we showed the world, at that point, who we were. And many of them had never heard of us. So that was the intention, really.",
 [00:26:30],RC,"So, I noticed that the name “International” has been in the acronym since the beginning. Do you know anything about how that came to be?",
-[00:26:42],TC,Canada. It's the United States and Canada. Canada put the “I” in IGRA. We're very proud of our Canadian friends to the north.,
+[00:26:42],TC,Canada. It's the United States and Canada. Canada put the “I” in IGRA. We're very proud of our Canadian friends to the north.,igra
 [00:26:57],RC,"And then, I guess, sort of to the flip side, do you have a rodeo that you felt like… just didn't go right or… that you were less pleased with?",
 [00:27:10],TC,"Well, there was but, unfortunately, I was not in attendance to a finals rodeo that was in Reno—Reno, Nevada, I believe it was—that had to be canceled because of protests, that we talked about earlier. There was a big protest and the grounds where the event was to be held ordered us off of the property. The event was not held. That's probably the biggest disappointment. Like I said, I wasn't in attendance there, but I was involved during the time. I just wasn't at that event.",homophobia
 ,RC,And you knew many of the people who were there?,
@@ -143,7 +143,7 @@ timestamp,speaker,words,tags
 ,RC,"We can look that up, too.",
 ,TC,We'll have to look it up.,
 [00:27:56],RC,Okay. Is there anything else you want to tell me about your experience in IGRA or anything else?,
-[00:28:03],TC,"I don't know, I think I've said a lot. But, you know, I guess I would stress the family orientation of our group. How we, as large as we are, we're a small organization. And our representation is special to each of us. With each other, it truly is a family.",
+[00:28:03],TC,"I don't know, I think I've said a lot. But, you know, I guess I would stress the family orientation of our group. How we, as large as we are, we're a small organization. And our representation is special to each of us. With each other, it truly is a family.",igra
 [00:28:39],RC,And was that something you felt immediately?,
 ,TC,"Immediately, immediately. That first event that I went to in Houston, Texas, in the ‘80s, I knew I was home. I knew I was home. Even though, like I said before, I didn't know anybody. I knew I found it. I knew I had found where I needed to be.",highlight
 [00:29:02],RC,"That’s lovely. So, the last question I always ask folks is, um, if you consider yourself a cow person—a cowboy or a cowgirl? And if so or not, why?",
