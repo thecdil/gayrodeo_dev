@@ -12,8 +12,8 @@ description: Oral Histories from the International Gay Rodeo Association
 date: 2019
 
 # URL variables
-url: https://thecdil.github.io # change to real domain when building: https://www.voicesofgayrodeo.com
-baseurl: /gayrodeo_dev
+url: https://www.voicesofgayrodeo.com
+baseurl:
 github_username: thecdil
 github_repository: https://github.com/thecdil/gayrodeo_dev
 author: "dcnb; owikle"
