@@ -2,7 +2,7 @@
 
 This repository holds the source code for <https://voicesofgayrodeo.com/>.
 
-Coding Instructions: <https://uidaholib.github.io/gayrodeo-coding/>
+Coding Instructions: <https://thecdil.github.io/gayrodeo-coding/>
 
 ## About:
 
