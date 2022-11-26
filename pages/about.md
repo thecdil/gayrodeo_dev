@@ -24,6 +24,8 @@ This project would not be possible without the tireless historical and organizat
 For information on the history of gay rodeo see: <http://gayrodeohistory.org/>   
 To see IGRA’s upcoming schedule see: <https://www.igra.com/CalendarRodeo.htm>
 
+<!-- commenting out for now
+
 {:.pt-3}
 ***Rebecca Scofield***  
 **Associate Professor of History**  
@@ -71,3 +73,5 @@ To see IGRA’s upcoming schedule see: <https://www.igra.com/CalendarRodeo.htm>
 {% include figure.html img="/team/gayrodeo-students.jpg" caption="Student Interns at an IGRA Convention" %}
 </div>
 </div>
+
+-->
