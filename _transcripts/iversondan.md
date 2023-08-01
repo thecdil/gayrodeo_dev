@@ -2,7 +2,7 @@
 object-id: iversondan  
 transcript: transcript-iversondan
 first-name: Dan
-last-name: Inverson
+last-name: Iverson
 date-interviewed: February 16, 2020
 location: Phoenix, Arizona
 interviewer: Revulai Detiv
