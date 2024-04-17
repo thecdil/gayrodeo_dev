@@ -1,5 +1,15 @@
-<div class="col-md-12">
+<div class="row">
 {% for transcript in site.transcripts %}
-<h3><a href="{{transcript.object-id}}.html">{{transcript.first-name}} {{transcript.last-name}}</a></h3>
+<div class="col-4">
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><a class="text-dark person-name" href="{{ transcript.object-id | prepend: '/interviews/' | append: '.html' | relative_url }}">{{transcript.first-name}} {{transcript.last-name}}</a></h5>
+      <p class="card-text"><b>Location:</b> {{transcript.location}}<br> 
+        <b>Date:</b> {{transcript.date-interviewed}}
+        </p>
+        <a class="btn btn-lg btn-dark mt-4" href="{{ transcript.object-id | prepend: '/interviews/' | append: '.html' | relative_url }}">Go to Transcript</a>
+    </div>
+  </div> 
+</div>
 {%endfor%}
 </div>
