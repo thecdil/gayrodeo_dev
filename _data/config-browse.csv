@@ -1,0 +1,5 @@
+field,display_name,btn,hidden,sort_name
+date-interviewed,Date,,,Date
+location,Location,true
+interviewer,Interviewer,true,
+
