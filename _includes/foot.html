@@ -5,6 +5,14 @@
 {% if page.layout == "transcript" %}{% include js/transcript-js.html %}{% endif %}
 {% if page.layout == "visualization" %}{% include js/visualization-js.html %}{% endif %}
 {% if page.layout == "interviews" %}{% include js/visualization-js.html %}
+{% include js/transcript-js.html %}
 <script src="{{ '/assets/js/aos.js' | relative_url }}"></script>
 <script>AOS.init();</script>{% endif %}
 {% if page.layout == "homepage" %}<script src="{{ '/assets/js/aos.js' | relative_url }}"></script>{% endif %}
+{% if page.custom-foot or layout.custom-foot %}
+{%- assign page_feet = page.custom-foot | split: ";" -%}
+{%- assign layout_feet = layout.custom-foot | split: ";" -%}
+{%- assign feet = page_feet | concat: layout_feet -%}
+{% for f in feet %}{% include {{ f }} %}
+{% endfor %}
+{%- endif -%}

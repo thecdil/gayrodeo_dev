@@ -43,7 +43,7 @@ layout: page
       {% assign my_float = my_integer | times: 1.0 %}
       {% assign rect-width = 100 | divided_by: my_float  %}
       {%if forloop.first%}<rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}"></rect>
-      {%else %} <a href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}">
+      {%else %} <a href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/' | relative_url }}">
         <rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}"></rect>
       </a>
       {%endif%}{%endfor%}</svg>
@@ -62,15 +62,15 @@ layout: page
   {% for item in transcript[1] %}
   {% if forloop.first %}
   <div class="contentsdiv">
-    <h3 class="my-4 {{transcript-name}}"><a href="{{transcript-name | prepend: '/interviews/transcripts/' | append: '.html' | relative_url }}">{{transcript-name | capitalize}}</a></h3>
+    <h3 class="my-4 {{transcript-name}}"><a href="{{transcript-name | prepend: '/interviews/' | append: '.html' | relative_url }}">{{transcript-name | capitalize}}</a></h3>
     <table id="contents-container" class="my-4 border {{transcript-name}} {%cycle 'bg-light','' %}">{%endif%}
       <tr id="{{ forloop.index }}" class="{{item.tags | replace: ";", " "}}">
-        <td class="line"><a href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}">{{transcript-name}}-{{ forloop.index }}</a></td>
+        <td class="line"><a href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/' | relative_url }}">{{transcript-name}}-{{ forloop.index }}</a></td>
         <td class="words">
           <div id="spoken">{%if item.speaker%}{{item.speaker | remove: ":"}}: {%endif%}{{item.words}}</div>
         </td>
         <td class="timestamp">{%if item.timestamp%}
-          <a target="_blank" href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}">{{item.timestamp}}</a>{% endif %}<br />{{item.tags | replace: ";", "<br>"}}</td>
+          <a target="_blank" href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/' | relative_url }}">{{item.timestamp}}</a>{% endif %}<br />{{item.tags | replace: ";", "<br>"}}</td>
       </tr>
 
       {% if forloop.last%}</table>

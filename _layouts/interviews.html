@@ -65,7 +65,7 @@ layout: page
             {% assign rect-width = 100 | divided_by: my_float  %}
             {%if forloop.first%}<text x="0" y="0" style="font-size:30px;">Browse Interview by Subject</text>
             <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}"></rect>
-            {%else %} <a href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/transcripts/' | relative_url }}">
+            {%else %} <a href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/' | relative_url }}">
               <rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}"></rect>
               </a>
             {%endif%}{%endfor%}
@@ -85,3 +85,5 @@ layout: page
       <br /> <br /> <br /> <br />
     </div>
   </div>
+
+  {% include transcript.html %}

@@ -1,0 +1,94 @@
+{% if page.object-id == 'all' %}
+{% assign transcripts = site.data.transcripts %}
+{%capture avsources%}{% for y in site.transcripts %}{{ y.av_source }};{% endfor %}
+{% endcapture %}
+{% assign avlinks-list = avlinks | split: ";" %}
+{% else %}
+{% assign items = site.data.transcripts[page.object-id] %}
+{%- comment -%} find all words used in the subject metadata {%- endcomment -%}
+{%- assign min-count = 1 -%}
+{%- assign raw-subjects = items | map: "tags" | compact | join: ";" | split: ";" -%}
+{%- capture subjects -%}{% for s in raw-subjects %}{% if s != "" %}{{- s | strip -}};{% endif %}{%- endfor -%}{%- endcapture -%}
+{%- assign subjects = subjects | split: ";" -%}
+{%- assign uniqueSubjects = subjects | uniq | sort -%}
+{%endif%}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+      <header>
+        <h2 class="poet-name my-2">Interview with {{ page.first-name}} {{ page.last-name}}</h2>
+        <p>{%if page.location%}{{page.location}} on {%endif%}{%if page.date-interviewed%}{{page.date-interviewed}}{%endif%} 
+        {%if page.interviewer%} | Interviewer: {{page.interviewer}}</p>{%endif%}
+      </header>
+      {% if page.av_source contains 'mp3' %}{% include player/mp3.html %}{% elsif page.av_source contains 'youtube' %}{% include player/youtube.html %}{% elsif page.av_source contains 'soundcloud' %}{% include player/soundcloud.html %}{% endif %}
+      <div class="filteroptions mx-2 bg-light p-4 mb-4">
+        <h3 class="text-center">
+          <div class="form-inline my-2 my-lg-0 ">
+            <input type="text" id="quicksearch" placeholder="Search ... " class="searchinput form-control mr-2 col-4">
+            <input class="searchinput mx-2 btn btn-lg btn-primary col-2" title="Search" value="Go" alt="Search" id="goButton" onclick="filterItems()">
+            <button class="reset btn btn-secondary ml-2" href="#" data-filter="" class="filter">Reset Filters</button>
+          </div>
+          <h2><span class="h5">Filter by topic:</span> <select id="filters" title="Jump to a year" class="filteroptions" style="max-width: 100%;">
+            <option value="all" selected="selected">All Topics</option>
+            {% assign filters = site.data.filters %}
+            {% if page.object-id == 'all' %}
+            {% for filter in filters %}
+            <option value="{{ filter.tag }}">{{filter.text | capitalize}}</option>
+            {% endfor %}
+            {%else%}
+            {% for filter in filters %}
+            {%if uniqueSubjects contains filter.tag %}<option value="{{ filter.tag }}">{{filter.text | capitalize}}</option>{%endif%}
+            {% endfor %}
+            {%endif%}
+            <br />
+            <hr /><br />
+          </select></h2>
+          {% if page.object-id == 'all' %}
+          {% capture lines %}{% for transcript in site.data.transcripts %}{% for item in transcript[1] %}{% if forloop.first == true %}{{ forloop.length }};{% else %}{% endif %}{% endfor %}{% endfor %}{%endcapture%}
+          {%assign linestotal = lines | split: ";" %}
+          {%for linetotal in linestotal%}
+          {% assign sum = sum | plus: linetotal %}
+          {%endfor%}
+          <h4><span class="info2"><span id="numberof">{{ sum}}</span> of {{ sum }} rows</span> (click a missing row to make it appear)</h4>
+          {% else %}
+          <h4><span class="info2"><span id="numberof">{{ items | size }}</span> of {{ items | size }} rows</span> (click a missing row to make it appear)</h4>
+          {% endif %}
+
+      </div>
+      <div class="col-md-8 ml-md-3">
+      <table id="contents-container">
+        {% if page.object-id == 'all' %}
+        {% for transcript in site.data.transcripts %}{%assign transcript-name = transcript[0] %}
+        {% for item in transcript[1] %}
+        <tr id="{{page.object-id}}{{ forloop.index }}" class="{{item.tags | replace: ';', ' '}}">
+          <td class="line">{{transcript-name}}-{{ forloop.index }}</td>
+          <td class="words">
+            <div id="spoken">{%if item.speaker%}{{item.speaker | remove: ":"}}: {%endif%}{{item.words}}</div>
+          </td>
+          <td class="timestamp">{%if item.timestamp%}
+            <a href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/transcripts/' | relative_url }}">{{item.timestamp}}</a>{% endif %}</td>
+        </tr>
+        {% endfor %}{% endfor %}
+        {% else %}
+        {% for item in items %}
+        <tr id="{{page.object-id}}{{ forloop.index }}" class="{{item.tags | replace: ";", " "}}">
+          <td class="line">{{ forloop.index }}</td>
+          <td class="words">
+            <div id="spoken">{{item.speaker | remove: ":"}}: {{item.words}}</div>
+          </td>
+          <td class="timestamp">{%if item.timestamp%}{% if page.av_source %}
+{% capture avlink %}timestamp/{{page.av_source}}.html{% endcapture %}
+            <a  href="{% include {{avlink}} %}">{{item.timestamp}}</a>{% else %}{{item.timestamp}}{% endif %}{% endif %}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+      </table>
+    </div>
+
+
+    </div>
+
+  </div>
+</div>
