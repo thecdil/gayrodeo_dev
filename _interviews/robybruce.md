@@ -1,7 +1,7 @@
 ---
 object-id: robybruce  
 transcript: transcript-robybruce
-first-name: Bruce "Grumpy"
+first-name: Bruce 'Grumpy'
 last-name: Roby
 date-interviewed: September 11, 2016
 location: Duncans Mills, California
