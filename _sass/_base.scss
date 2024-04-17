@@ -29,6 +29,9 @@ a {
     font-size: 25px;
 }
 
+.lobster {
+    font-family: 'Lobster', cursive;
+}
 /* small title text on phone */
 @include media-query($on-palm) {
     .site-title {
