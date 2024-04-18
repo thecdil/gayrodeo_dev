@@ -21,10 +21,11 @@ layout: page
       {% if page.object-id != "all" %}
       <p class="lead"><strong>Interview Location: {{ page.location }}</strong></p>
         <p class="mb-4 lead"><strong>Date: {{ page.date-interviewed }} | Interviewer: {{ page.interviewer }}</strong></p>
-        <a class="btn btn-lg btn-dark mt-4" href="transcripts\{{ page.object-id }}.html">Go to Transcript</a>
-        {% else %}
-        <a class="btn btn-lg btn-dark mt-4" href="transcripts\{{ page.object-id }}.html">Go to Transcripts</a>
+        <!--<a class="btn btn-lg btn-dark mt-4" href="transcripts\{{ page.object-id }}.html">Go to Transcript</a>-->
+        
         {% endif %}
+        <a class="btn btn-lg btn-dark mt-4" href="#transcript">Go to Transcript</a>
+       
     </div>
 
 
@@ -52,7 +53,7 @@ layout: page
       {%endfor%}
 
 
-      <div class="row my-5">
+      <div class="row mt-5 mb-1">
         <div class="col-md-12 mb-5">
           {%include visualization-style.html %}
 
@@ -70,7 +71,6 @@ layout: page
               </a>
             {%endif%}{%endfor%}
           </svg>
-          <br />
           {%endif%}
           {%endfor%}
           {% if page.object-id != "all" %}
@@ -82,7 +82,7 @@ layout: page
           {% endif %}
         </div>
       </div>
-      <br /> <br /> <br /> <br />
+     
     </div>
   </div>
 
