@@ -7,7 +7,7 @@ var items = [
     {% for item in items %}
     { {% for f in fields %}{% if item[f.field] %}{{ f.field | escape | jsonify }}:{{ item[f.field] | strip | jsonify }}, {%- endif -%}{%- endfor -%}
         "title": "{{item.first-name}} {{item.last-name}}",
-        "id":{{ item.objectid | jsonify }} }{% unless forloop.last %},{% endunless %}{%- endfor -%}
+        "id":{{ item.object-id | jsonify }} }{% unless forloop.last %},{% endunless %}{%- endfor -%}
 ];
 
 
