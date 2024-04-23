@@ -60,7 +60,7 @@ endcapture -%}
         <div class="{{clip.tag}} card col-md-6 my-5 border border-secondary text-white {% cycle 'offset-md-4 bg-secondary  left-text-box ', 'offset-md-3 right-text-box' %}" data-aos="{% cycle  'zoom-in-right', 'zoom-in-left'%}">
           <div class="card-body">
             <p class="card-text"><a class="text-white clip"
-                href="{{clip.lastname | downcase}}{{clip.firstname | downcase}}.html?q={{ clip.search | url_param_escape }}">
+                href="#{{ clip.line }}">
                 {{clip.comments }}</a> </p>
             <p class="text-right h5">-{{clip.firstname}} {{clip.lastname}}</p>
           </div>
