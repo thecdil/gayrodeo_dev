@@ -1,6 +1,21 @@
 ---
 layout: page
 ---
+{% if page.object-id == 'all' %}
+{% assign transcripts = site.data.transcripts %}
+{%capture avsources%}{% for y in site.transcripts %}{{ y.av_source }};{% endfor %}
+{% endcapture %}
+{% assign avlinks-list = avlinks | split: ";" %}
+{% else %}
+{% assign items = site.data.transcripts[page.object-id] %}
+{%- comment -%} find all words used in the subject metadata {%- endcomment -%}
+{%- assign min-count = 1 -%}
+{%- assign raw-subjects = items | map: "tags" | compact | join: ";" | split: ";" -%}
+{%- capture subjects -%}{% for s in raw-subjects %}{% if s != "" %}{{- s | strip -}};{% endif %}{%- endfor -%}{%-
+endcapture -%}
+{%- assign subjects = subjects | split: ";" -%}
+{%- assign uniqueSubjects = subjects | uniq | sort -%}
+{%endif%}
 <div class="container">
   <div class="row my-5">
     <div class="col-md-6 text-center">
@@ -20,70 +35,47 @@ layout: page
       <p>{{content}}</p>
       {% if page.object-id != "all" %}
       <p class="lead"><strong>Interview Location: {{ page.location }}</strong></p>
-        <p class="mb-4 lead"><strong>Date: {{ page.date-interviewed }} | Interviewer: {{ page.interviewer }}</strong></p>
-        <!--<a class="btn btn-lg btn-dark mt-4" href="transcripts\{{ page.object-id }}.html">Go to Transcript</a>-->
-        
-        {% endif %}
-        <a class="btn btn-lg btn-dark mt-4" href="#transcript">Go to Transcript</a>
-       
-    </div>
+      <p class="mb-4 lead"><strong>Date: {{ page.date-interviewed }} | Interviewer: {{ page.interviewer }}</strong></p>
+      <!--<a class="btn btn-lg btn-dark mt-4" href="transcripts\{{ page.object-id }}.html">Go to Transcript</a>-->
 
+      {% endif %}
+      <a class="btn btn-lg btn-dark mt-4" href="#transcript">Go to Transcript</a>
 
-    <div class="row mt-4">
-
-      {% for clip in site.data.master-conversations %}
-      {% if clip.lastname == page.last-name and clip.firstname == page.first-name %}
-      <div class="row">
-        <div class="col-md-3">
-          {% for conversation in site.data.conversation-filters %}
-          {% if clip.tag contains conversation.tag %}
-          <h4 class="text-right question mt-5">{{ conversation.question }}</h4>
-          {% endif %} {% endfor %}
-        </div>
-        <div class="col-md-9">
-          <div class="{{clip.tag}} card col-md-6 my-5 border border-secondary text-white {% cycle 'offset-md-4 bg-secondary  left-text-box ', 'offset-md-3 right-text-box ' %}" data-aos="{% cycle  'zoom-in-right', 'zoom-in-left'%}">
-            <div class="card-body">
-              <p class="card-text"><a class="text-white clip" href="transcripts/{{clip.lastname | downcase}}{{clip.firstname | downcase}}.html?q={{ clip.search | url_param_escape }}">{{ clip.comments }}</a> </p>
-              <p class="text-right h5">-{{clip.firstname}} {{clip.lastname}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      {%endif%}
-      {%endfor%}
-
-
-      <div class="row mt-5 mb-1">
-        <div class="col-md-12 mb-5">
-          {%include visualization-style.html %}
-
-          {% for transcript in site.data.transcripts %}{%assign transcript-name = transcript[0] %}
-          {%if transcript-name == page.object-id %}
-          <svg class="chart" width="100%" height="100px" style="overflow: visible">
-            {% for item in transcript[1] %}
-            {% assign my_integer = forloop.length %}
-            {% assign my_float = my_integer | times: 1.0 %}
-            {% assign rect-width = 100 | divided_by: my_float  %}
-            {%if forloop.first%}<text x="0" y="0" style="font-size:30px;">Browse Interview by Subject</text>
-            <rect x="{{rect-width}}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}"></rect>
-            {%else %} <a href="{{ forloop.index | prepend: transcript-name | prepend: '.html#' | prepend: transcript-name | prepend: '/interviews/' | relative_url }}">
-              <rect x="{{forloop.index | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-toggle="tooltip" data-placement="top" class="{{item.tags | replace: ';', ' '}}" title="{{ item.words }}{% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}"></rect>
-              </a>
-            {%endif%}{%endfor%}
-          </svg>
-          {%endif%}
-          {%endfor%}
-          {% if page.object-id != "all" %}
-          <br />
-          <p> Click below to filter the visualization by subject. <button id="reset" class="btn btn-outline-dark ml-4">Reset</button></p>
-          <br />
-
-          {%include visualization-filter-legend.html %}
-          {% endif %}
-        </div>
-      </div>
-     
     </div>
   </div>
 
+
+  <div class="row mt-4">
+
+    {% for clip in site.data.master-conversations %}
+    {% if clip.lastname == page.last-name and clip.firstname == page.first-name %}
+    <div class="row">
+      <div class="col-md-3">
+        {% for conversation in site.data.conversation-filters %}
+        {% if clip.tag contains conversation.tag %}
+        <h4 class="text-right question mt-5">{{ conversation.question }}</h4>
+        {% endif %} {% endfor %}
+      </div>
+      <div class="col-md-9">
+        <div class="{{clip.tag}} card col-md-6 my-5 border border-secondary text-white {% cycle 'offset-md-4 bg-secondary  left-text-box ', 'offset-md-3 right-text-box' %}" data-aos="{% cycle  'zoom-in-right', 'zoom-in-left'%}">
+          <div class="card-body">
+            <p class="card-text"><a class="text-white clip"
+                href="transcripts/{{clip.lastname | downcase}}{{clip.firstname | downcase}}.html?q={{ clip.search | url_param_escape }}">
+                {{clip.comments }}</a> </p>
+            <p class="text-right h5">-{{clip.firstname}} {{clip.lastname}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {%endif%}
+    {%endfor%}
+
+
+
+  </div>
+
+
   {% include transcript.html %}
+</div>
+
+

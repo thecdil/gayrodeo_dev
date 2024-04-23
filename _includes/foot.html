@@ -1,11 +1,13 @@
 <!-- Optional JS for Bootstrap: jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="{{ '/assets/js/jquery-3.6.0.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+
 <!-- load other js -->
 {% if page.layout == "transcript" %}{% include js/transcript-js.html %}{% endif %}
 {% if page.layout == "visualization" %}{% include js/visualization-js.html %}{% endif %}
-{% if page.layout == "interviews" %}{% include js/visualization-js.html %}
+{% if page.layout == "interviews" %}
 {% include js/transcript-js.html %}
+
 <script src="{{ '/assets/js/aos.js' | relative_url }}"></script>
 <script>AOS.init();</script>{% endif %}
 {% if page.layout == "homepage" %}<script src="{{ '/assets/js/aos.js' | relative_url }}"></script>{% endif %}
@@ -16,3 +18,14 @@
 {% for f in feet %}{% include {{ f }} %}
 {% endfor %}
 {%- endif -%}
+{% if page.layout == "interviews" %}
+<script>
+$(document).ready(function () {
+    
+    // init tooltips
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
+  });
+</script>
+{% endif %}
