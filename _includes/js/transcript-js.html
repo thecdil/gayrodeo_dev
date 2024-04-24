@@ -2,6 +2,28 @@
   let url = new URL(window.location);
      let params = url.searchParams;
  
+     function vizFilter(x) {
+  var rects = document.getElementsByTagName('rect');
+  params.set('filter', x);
+    var p = params.toString();
+    window.history.replaceState({}, '', location.pathname + '?' + p);
+  for (i = 0; i < rects.length; i++) {
+    var classString = rects[i].classList;
+        classString.add('dark');
+        classString.forEach(item=>{
+    if(item.startsWith('primary')) {
+      classString.remove(item) ;}});
+    if (x == "all"){
+      classString.remove('dark');
+      resetVals();
+    } else if (classString.contains(x)){
+      classString.remove('dark');          
+      classString.add("primary-" + x);  
+    } else if (x == "darkforall"){ }
+        }
+    }
+
+
      function searchLines(x) {
      var itemcontainer = document.getElementById("contents-container");
      var lines = itemcontainer.getElementsByClassName("line");
@@ -10,6 +32,7 @@
      let params = url.searchParams;
      params.set('q', input);
      params.delete('filter');
+     params.delete('line');
      var p = params.toString();
      window.history.replaceState({}, '', location.pathname + '?' + p);
      var filter = input.toUpperCase();
@@ -23,7 +46,7 @@
          if (itemcontents.innerHTML.toUpperCase().indexOf(filter) > -1) {
            itemcontents.classList.add("featured");
            itemcontents.classList.remove("text-muted");
-           searchResults += '<option class=text-truncate" style="max-width: 250px;" value="'+ i +'">Line ' + i + ' -- ' + itemcontents.innerHTML.substring(0,125) + '...</option>';
+           searchResults += '<option class=text-truncate" style="max-width: 250px;" value="{{page.object-id}}'+ i +'">Line ' + i + ' -- ' + itemcontents.innerHTML.substring(0,125) + '...</option>';
            itemcontents.innerHTML = itemcontents.innerHTML.replace(input, "<span class='text-danger'>" + input + "</span>");
            var rightnum = i + 1;
            var rectal = "rect" + rightnum;
@@ -49,7 +72,9 @@
      var item = itemcontainer.getElementsByClassName(filterClass);  
      vizFilter(filterClass);
      params.set('filter', filterClass);
-     params.delete('?');
+     params.delete('q');
+     params.delete('line');
+
      var p = params.toString();
      window.history.replaceState({}, '', location.pathname + '?' + p);
      var searchResults = '<option>Select and scroll to a matching line</option>';
@@ -64,7 +89,7 @@
        var prevLine = i - 1;
        var nextLine = i + 1;
          if (!lines[prevLine].classList.contains(filterClass)){
-         searchResults += '<option class="text-truncate" style="max-width: 250px;" value="'+ i +'">Line ' + i ;
+         searchResults += '<option class="text-truncate" style="max-width: 250px;" value="{{page.object-id}}'+ i +'">Line ' + i ;
            var startLine = itemcontents.innerHTML.substring(0,125);
            var startNumber = i;
          }
@@ -108,25 +133,23 @@
  }
  
    function scrollToLine(x) {
-   var line_array_num = x;
-   const featured_lines = document.getElementsByClassName('line');
-   var line_num = parseInt(line_array_num);
-   var position = featured_lines[line_num].offsetTop;
-   featured_lines[line_num].getElementsByClassName('words')[0].classList.add("featured");
-   var plus_position = parseInt(position) - 300;
-     window.scroll({
-     top: plus_position,
-     behavior: 'smooth'
-   });
- console.log(position + ' - ' + plus_position);
- }
- 
+      var targetElement = document.getElementById(x);
+      if (targetElement) {
+        // Smoothly scroll to the element
+        targetElement.scrollIntoView({
+          behavior: 'smooth',  // Enables smooth scrolling
+          block: 'start'       // Aligns to the top of the viewport
+        });
+      }
+    }
+
  
  
  
  function resetVals(){
      params.delete('q');
       params.delete('filter');
+      params.delete('line');
       window.history.replaceState({}, '', location.pathname);
    document.getElementById("linecount").classList.add("d-none");
       document.getElementById("filtersearch").classList.add("d-none");
@@ -136,6 +159,7 @@
       for (i = 0; i < words.length; i++) {
        words[i].classList.remove('text-muted');
        words[i].classList.remove('featured');
+       words[i].classList.remove('small');
        if ( words[i].querySelector(".text-danger")){
        words[i].getElementsByClassName('text-danger')[0].classList.remove('text-danger');}
       }
@@ -179,6 +203,8 @@
 
   var dataFilter = url.searchParams.get('q');
   var codeFilter = url.searchParams.get('filter');
+  var lineFilter = url.searchParams.get('line');
+
   var hashfilter = decodeURIComponent(location.hash.substr(1));//.replace(/%20/g, " ");
    if(dataFilter) { 
        // code to be executed if a hash is contained in the url
@@ -202,8 +228,23 @@
        document.getElementById(hashfilter).classList.add('featured');
        params.delete('q'); params.delete('filter'); 
        
+       
+   }
+   else if(lineFilter){    
+       params.delete('q'); 
+       params.delete('filter'); 
+       var targetElement = document.getElementById(lineFilter);
+            if (targetElement) {
+              targetElement.classList.add('featured');
+                // Smoothly scroll to the element
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',  // Enables smooth scrolling
+                    block: 'start'       // Aligns to the top of the viewport
+                });
+            }
    }
    else{
+
    };
   })();
 

@@ -8,9 +8,21 @@
         }
     }
     // scroll to top function
+   
     function scrollToTop() {
+        {% unless page.url contains 'interviews/' %}
         $('html, body').animate({scrollTop: 0}, 750);
+        {% else %}
+        
+        var transcriptElement = document.getElementById('transcript');
+
+            transcriptElement.scrollIntoView({
+                behavior: 'smooth',  // Smooth scrolling
+                block: 'start'       // Align to the top of the viewport
+            });
+        {% endunless %}
     }
+    
 </script>
 <button id="scroll-to-top" type="button" class="btn btn-link btn-lg text-clearwater" onclick="scrollToTop();" title="Back to Top" aria-label="Back to Top">
     {% include icons/arrow-up-square.svg %}
