@@ -9,7 +9,7 @@ layout: page
 
   <div class="row">
     {%for n in site.data.filters %}
-    <div class="col-md-2 col-4 ">
+    <div class="col-md-3 col-4 ">
       <svg class="legend" width="100%" height="25px" data-id="{{n.tag | slugify }}" style="cursor:pointer;" data-toggle="tooltip" data-placement="left" title="On {{ n.description | escape }}">
         <circle cx="25" cy="10" r="10"  class="{{n.tag | slugify}}"></circle><text x="38" y="15">{{n.tag}}</text>
       </svg>
@@ -21,9 +21,11 @@ layout: page
   <button id="reset" class="btn btn-lg btn-secondary float-right">Reset</button>
   <br />
   <br />
-  {% for transcript in transcripts %}{%assign transcript-name = transcript[0] %}
+  {% for transcript in transcripts %}
+  {%assign transcript-name = transcript[0] %}
+  {% capture narrator %}{% for t in site.transcripts %}{% if t.object-id == transcript-name %}{{t.first-name}}{% if t.last-name %} {{t.last-name}}{% endif %}{% endif %}{% endfor%}{% endcapture %}
   <div class="vizdiv">
-    <h3 x="0" y="0" data-id="{{transcript-name}}" style="cursor:pointer;" class="mt-4 toggle_int {{transcript-name}}">{% for t in site.transcripts %}{% if t.object-id == transcript-name %}{{t.title}}{% endif %}{% endfor%}<i class="fas fa-filter"></i> <small>Click to filter</small></h3>
+    <h3 x="0" y="0" data-id="{{transcript-name}}" style="cursor:pointer;" class="mt-4 toggle_int {{transcript-name}}">{{ narrator }}<i class="fas fa-filter"></i> <small>Click to filter</small></h3>
     <svg class="chart {{transcript-name}}" width="100%" height="100px" style="overflow: visible">
       {% for item in transcript[1] %}
       {% assign my_integer = forloop.length %}
@@ -36,50 +38,23 @@ layout: page
 
 </div>
 <br />
+
 <hr /><br />
-<div class="container d-none">
+<div class="container" id="transcript-contents">
   <h2>Contents</h2>
 
 
-  {% for transcript in site.data.transcripts %}{%assign transcript-name = transcript[0] %}
-  {%capture audiovideo-id %}{%for item in site.transcripts%}{%if item.object-id == transcript-name %}{{item.audiovideo-id}}{%endif%}{%endfor%}{% endcapture %}
-  {%capture avlink %}{%for item in site.transcripts%}{%if item.object-id == transcript-name %}timestamp/{{item.av_source}}.html{%endif%}{%endfor%}{% endcapture %}
+  {% for transcript in site.data.transcripts %}
+  {%assign transcript-name = transcript[0] %}
+  {% capture narrator %}{% for t in site.transcripts %}{% if t.object-id == transcript-name %}{{t.first-name}}{% if t.last-name %} {{t.last-name}}{% endif %}{% endif %}{% endfor%}{% endcapture %}
   {% for item in transcript[1] %}
   {% if forloop.first %}
   <div class="contentsdiv">
-    <h3 class="my-4 {{transcript-name}}"><a href="{{transcript-name | prepend: '/interviews/' | append: '.html' | relative_url }}">{{transcript-name | capitalize}}</a></h3>
-    <div id="contents-container" class="my-4 border {{transcript-name}} {%cycle 'bg-light','' %}">{%endif%}
-      <div id="{{ forloop.index }}" class="{%- assign tags = item.tags | split: ";" | compact | where_exp: 'item', 'item != " "' %}{% for tag in tags %}{{tag | slugify }} {% endfor %} row">
-        <div class="line col-2"><a href="{{ forloop.index | prepend: transcript-name | prepend: '.html?line=' | prepend: transcript-name | prepend: '/interviews/' | relative_url }}">{{transcript-name}}-{{ forloop.index }}</a></div>
-        <div class="col-10 col-md-8 words">
-          <div id="spoken">{%if item.speaker%}{{item.speaker | remove: ":"}}: {%endif%}{{item.words}}</div>
-        </div>
-        <div class="col-md-2 timestamp d-md-block d-none">{%if item.timestamp%}
-          <a target="_blank" href="{{ forloop.index | prepend: transcript-name | prepend: '.html?line=' | prepend: transcript-name | prepend: '/interviews/' | relative_url }}">{{item.timestamp}}</a>{% endif %}<br />{{item.tags | replace: ";", "<br>"}}</div>
-        </div>
-
-      {% if forloop.last%}</div>
-  </div>{%endif%}
-  {% endfor %}{% endfor %}
-
-
-</div>
-<hr /><br />
-<div class="container">
-  <h2>Contents</h2>
-
-
-  {% for transcript in site.data.transcripts %}{%assign transcript-name = transcript[0] %}
-  {%capture audiovideo-id %}{%for item in site.transcripts%}{%if item.object-id == transcript-name %}{{item.audiovideo-id}}{%endif%}{%endfor%}{% endcapture %}
-  {%capture avlink %}{%for item in site.transcripts%}{%if item.object-id == transcript-name %}timestamp/{{item.av_source}}.html{%endif%}{%endfor%}{% endcapture %}
-  {% for item in transcript[1] %}
-  {% if forloop.first %}
-  <div class="contentsdiv">
-    <h3 class="my-4 {{transcript-name}}"><a href="{{transcript-name | prepend: '/interviews/' | append: '.html' | relative_url }}">{{transcript-name | capitalize}}</a></h3>
-    <table id="contents-container" class="my-4 border {{transcript-name}} {%cycle 'bg-light','' %}">{%endif%}
+    <h3 class="my-4 {{transcript-name}}"><a href="{{transcript-name | prepend: '/interviews/' | append: '.html' | relative_url }}">{{ narrator }}</a></h3>
+    <table id="contents-container" class="my-4 p-2 border {{transcript-name}} {%cycle 'bg-light','' %}">{%endif%}
       <tr id="{{ forloop.index }}" class="{{item.tags | replace: ";", " "}}">
-        <td class="line"><a href="{{ forloop.index | prepend: transcript-name | prepend: '.html?line=' | prepend: transcript-name | prepend: '/interviews/' | relative_url }}">{{transcript-name}}-{{ forloop.index }}</a></td>
-        <td class="words">
+        <td class="p-2" style="width:10%;vertical-align:top"><a href="{{ forloop.index | prepend: transcript-name | prepend: '.html?line=' | prepend: transcript-name | prepend: '/interviews/' | relative_url }}" class="small">Line {{ forloop.index }}</a></td>
+        <td class="words p-2">
           <div id="spoken">{%if item.speaker%}{{item.speaker | remove: ":"}}: {%endif%}{{item.words}}</div>
         </td>
         <td class="timestamp">{%if item.timestamp%}
