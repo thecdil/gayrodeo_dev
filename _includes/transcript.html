@@ -3,7 +3,6 @@
     <div class="vizdiv w-100">
       <h2>Transcript</h2>
       <p class="my-2 meta ">Topics:</h4>
-      {% include visualization-filter-legend.html %}
       <svg id="colorViz" class="chart" width="100%" height="100px" style="overflow: visible">
         {% for item in items %}
         {% assign my_integer = forloop.length %}
