@@ -34,7 +34,8 @@ Also, as part of the larger project, in 2020 Dr. Robert Caisely of UI’s Depart
 
 The play has enjoyed a zoom reading hosted by the University of Idaho in 2021 and an in-person reading at the Autry Museum in 2023.
 
-Here is some of the promotional press on the play!
+The play received coverage in the [_Los Angeles Times_](https://www.latimes.com/entertainment-arts/newsletter/2023-11-01/what-to-do-this-weekend-that-damn-horse-gay-cowboy-autry-museum-l-a-goes-out){:target="_blank"},[_The Eastsider LA_](https://www.theeastsiderla.com/eastsider_on_the_go/arts_and_culture/pioneering-gay-rodeo-inspires-new-play-that-damn-horse/article_1930fe1a-751f-11ee-9f4e-571bbaef805b.html){:target="_blank"}, and by [the Autry Museum of the American West](https://theautry.org/about-us/press/autry-museum-american-west-presents-damn-horse-stories-gay-rodeo-performance-brings){:target="_blank"}.  
+
 
 # Our Team
 
