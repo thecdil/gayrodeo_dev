@@ -43,7 +43,7 @@ Here is some of the promotional press on the play!
 
 <div class="row py-2">
     <div class="col-md-3 text-center">
-        {%- assign photo = p.indexid | append: '.jpg' -%}
+        {%- assign photo = p.indexid  -%}
         {% capture caption %}{{ p.name }}{% endcapture %}
         {% include figure.html img=photo caption=p.name %}
     </div>
