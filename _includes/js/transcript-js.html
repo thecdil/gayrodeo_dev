@@ -167,7 +167,9 @@
       var rects = svgContainer.getElementsByTagName('rect');
       for (i = 0; i < rects.length; i++) {
        rects[i].classList.remove('dark');
-       rects[i].classList.remove('rect-hilite');
+       rects[i].classList.remove('hilite');
+       rects[i].classList.remove('primary-hilite');
+
  
       }
  }
