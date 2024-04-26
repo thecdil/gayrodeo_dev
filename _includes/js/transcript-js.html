@@ -8,6 +8,8 @@
       params.set('filter', x);
       var p = params.toString();
       window.history.replaceState({}, '', location.pathname + '?' + p);
+      document.getElementById('filters').value = x;
+
     }
     for (i = 0; i < rects.length; i++) {
       var classString = rects[i].classList;
@@ -204,10 +206,10 @@
     }
     else if (codeFilter) {
       // code to be executed if a filter is contained in the url search parameters
-      document.getElementById('filters').value = codeFilter;
       filterLines(codeFilter);
       document.getElementById('colorViz').scrollIntoView();
       params.delete('q');
+      document.getElementById('filters').value = codeFilter;
     }
     else if (hashfilter) {
       // code to be executed if an anchor (#) is contained in the url
