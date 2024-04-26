@@ -8,8 +8,8 @@
         {% assign my_integer = forloop.length %}
         {% assign my_float = my_integer | times: 1.0 %}
         {% assign rect-width = 100 | divided_by: my_float %}
-        <a onclick="scrollToLine('{{page.object-id}}{{ forloop.index }}');">
-          <rect id="rect{{-forloop.index-}}" x="{{forloop.index0 | times: rect-width }}%" y="20" width="{{rect-width}}%"
+        <a onclick="scrollToLine('{{page.object-id}}{{ forloop.index0 }}');">
+          <rect id="rect{{-forloop.index0-}}" x="{{forloop.index0 | times: rect-width }}%" y="20" width="{{rect-width}}%"
             height="50" data-toggle="tooltip" data-placement="top" class="{%- assign tags = item.tags | split: ";" |
             compact | where_exp: 'item' , 'item != " "' %}{% for tag in tags %}{{tag | slugify }} {% endfor %}"
             title="{{ item.words | default: '...' }}{% if item.tags %} (Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}">
@@ -20,8 +20,7 @@
   <div id="filters-content" class="pe-md-5">
     <div class="row my-3 sticky-top bg-white border-bottom border-left border-right d-print-none py-3 w-md-75" id="filters-search" style="z-index: 0;">
       <div class="col {% unless site.data.filters %}d-none{% endunless %}">
-        <select id="filters" title="Filter by Topic" aria-label="Topic filtering dropdown select option"
-          class="filters p-2 form-select" onchange="filterLines()">
+        <select id="filters" title="Filter by Topic" aria-label="Topic filtering dropdown select option" class="filters p-2 form-select" onchange="filterLines(this.value)">
           <option value="all" class="reset" selected="selected reset">Filter by Topic</option>
           {% assign filters = site.data.filters %}
           {% for filter in filters %}
@@ -55,7 +54,7 @@
       <div id="filtersearch" class="col-12 d-none mt-3">
         <h5 id="linecount" class="d-none small ms-3"><span id="numberof"></span></h5>
 
-        <select class=" mb-2 form-select p-2" id="searchResults" onchange="scrollToLine(this.value);">
+        <select class=" mb-2 form-select p-2 border border-info" id="searchResults" onchange="scrollToLine(this.value);">
 
         </select>
       </div>
@@ -66,8 +65,8 @@
       {% for item in items %}
       {% assign prev_index = forloop.index0 | times: 1 | minus: 1 %}
       {% assign prev_speaker = items[prev_index].speaker %}
-      {% assign mod = forloop.index | plus: 1 | modulo: 5 %}
-      <div id="{{page.object-id}}{{ forloop.index }}" class="{%- assign tags = item.tags | split: ";" | compact | where_exp: 'item' , 'item != " "' %}{% for tag in tags %}{{tag | slugify }} {% endfor %}row line my-1">
+      {% assign mod = forloop.index0 | plus: 1 | modulo: 5 %}
+      <div id="{{page.object-id}}{{ forloop.index0 }}" class="{%- assign tags = item.tags | split: ";" | compact | where_exp: 'item' , 'item != " "' %}{% for tag in tags %}{{tag | slugify }} {% endfor %}row line py-1">
         <p class="words col-md-10 col-lg-8 col-print-12 pr-0">
           {% unless item.speaker == prev_speaker %}{%if item.speaker %}<span class="fw-bold pe-3 pb-3">{{item.speaker |
             remove: ":"}}:</span>{% endif %}{% endunless %}{{item.words}}

@@ -230,11 +230,7 @@ td {
     background: aquamarine;
 }
 
-.featured {
-    
-    float: none;
-    clear: both;
-}
+
 
 .linenum {
     font-size: 11px;
@@ -272,6 +268,12 @@ td {
 .featured {
     background-color: aquamarine !important;
     color: black !important;
+}
+
+.border-featured {
+    border-left: 1px solid aquamarine !important;
+    border-left-width: thick !important;
+        background-color: #f8f9fa !important;
 }
 
 .btn-outline-dark:hover {
