@@ -34,7 +34,7 @@
         <div id="transcriptsearch" class="bg-lightr">
           <div class="row">
             <div class="col-md-6">
-              <div class="input-group fs-5">
+              <div class="input-group fs-5 mt-2 mt-md-0">
                 <input type="text" class="form-control" placeholder="Search..." aria-label="Search"
                   aria-describedby="goButton" id="quicksearch">
                 <div class="input-group-append">
@@ -45,7 +45,7 @@
               </div>
             </div>
             <div class="col-md-6">
-              <button class="reset btn btn-sm btn-outline-primary mt-1" onclick="vizFilter('all');">Reset
+              <button class="reset btn btn-sm btn-outline-primary mt-2" onclick="vizFilter('all');">Reset
                 Filters</button>
             </div>
           </div>
@@ -54,7 +54,7 @@
       <div id="filtersearch" class="col-12 d-none mt-3">
         <h5 id="linecount" class="d-none small ms-3"><span id="numberof"></span></h5>
 
-        <select class=" mb-2 form-select p-2 border border-info" id="searchResults" onchange="scrollToLine(this.value);">
+        <select class="w-100 col-md-8 mb-2 form-select p-2 border border-info" id="searchResults" onchange="scrollToLine(this.value);">
 
         </select>
       </div>
