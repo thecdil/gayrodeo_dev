@@ -3,6 +3,7 @@ object-id: rodriguezjoe
 transcript: transcript-rodriguezjoe  
 first-name: "'Paniolo' Joe"
 last-name: Rodriguez
+title: "Interview with 'Paniolo' Joe Rodriguez"
 date-interviewed: September 10, 2016
 location: Duncans Mills, California
 interviewer: Rebecca Scofield

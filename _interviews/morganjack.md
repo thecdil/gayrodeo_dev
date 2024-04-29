@@ -3,6 +3,7 @@ object-id: morganjack
 transcript: transcript-morganjack  
 first-name: Jack
 last-name: Morgan
+title: Interview with Jack Morgan
 date-interviewed: September 11, 2016
 location: Duncans Mills, California
 interviewer: Rebecca Scofield

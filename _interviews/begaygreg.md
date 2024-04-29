@@ -3,6 +3,7 @@ object-id: begaygreg
 transcript: transcript-begaygreg  
 first-name: Greg
 last-name: Begay
+title: Interview with Greg Begay
 date-interviewed: November 22, 2019
 location: Denver, Colorado
 interviewer: Renae Campbell

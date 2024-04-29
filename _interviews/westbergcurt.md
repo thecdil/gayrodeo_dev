@@ -3,6 +3,7 @@ object-id: westbergcurt
 transcript: transcript-westbergcurt 
 first-name: Curt
 last-name: Westberg
+title: Interview with Curt Westberg
 date-interviewed: March 6, 2023
 location: Moscow, Idaho
 interviewer: Rebecca Scofield

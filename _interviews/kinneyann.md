@@ -3,6 +3,7 @@ object-id: kinneyann
 transcript: transcript-kinneyann  
 first-name: Ann
 last-name: Kinney
+title: Interview with Ann Kinney
 date-interviewed: September 11, 2016
 location: Duncans Mills, California
 interviewer: Rebecca Scofield

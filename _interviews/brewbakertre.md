@@ -3,6 +3,7 @@ object-id:  brewbakertre
 transcript: transcript-brewbakertre  
 first-name: Tre
 last-name: Brewbaker
+title: Interview with Tre Brewbaker
 date-interviewed: April 1, 2017
 location: Dallas, Texas
 interviewer: Rebecca Scofield

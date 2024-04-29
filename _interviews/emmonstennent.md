@@ -3,6 +3,7 @@ object-id: emmonstennent
 transcript: transcript-emmonstennent  
 first-name: Tennent
 last-name: Emmons
+title: Interview with Tennent Emmons
 date-interviewed: April 1, 2017
 location: Dallas, Texas
 interviewer: Rebecca Scofield

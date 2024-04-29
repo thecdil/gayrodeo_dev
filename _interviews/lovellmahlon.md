@@ -3,6 +3,7 @@ object-id: lovellmahlon
 transcript: transcript-lovellmahlon  
 first-name: Mahlon
 last-name: Lovell
+title: Interview with Mahlon Lovell
 date-interviewed: November 22, 2019
 location: Denver, Colorado
 interviewer: Renae Campbell

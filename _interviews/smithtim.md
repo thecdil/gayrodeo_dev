@@ -3,6 +3,7 @@ object-id: smithtim
 transcript: transcript-smithtim  
 first-name: Tim
 last-name: Smith
+title: Interview with Tim Smith
 date-interviewed: November 22, 2019
 location: Denver, Colorado
 interviewer: Saraya Flaig

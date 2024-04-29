@@ -3,6 +3,7 @@ object-id: channeltommy
 transcript: transcript-channeltommy  
 first-name: Tommy
 last-name: Channel
+title: Interview with Tommy Channel
 date-interviewed: November 11, 2019
 location: Denver, Colorado
 interviewer: Renae Campbell

@@ -3,6 +3,7 @@ object-id: trusleyron
 transcript: transcript-trusleyron  
 first-name: Ron
 last-name: Trusley
+title: Interview with Ron Trusley
 date-interviewed: November 23, 2019
 location: Denver, Colorado
 interviewer: Rebecca Scofield

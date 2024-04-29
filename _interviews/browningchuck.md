@@ -3,6 +3,7 @@ object-id: browningchuck
 transcript: transcript-browningchuck  
 first-name: Chuck
 last-name: Browning
+title: Interview with Chuck Browning
 date-interviewed: July 9, 2021
 location: Denver, Colorado 
 interviewer: Rebecca Scofield

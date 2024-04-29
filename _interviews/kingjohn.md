@@ -3,6 +3,7 @@ object-id: kingjohn
 transcript: transcript-kingjohn  
 first-name: John
 last-name: King
+title: Interview with John King
 date-interviewed: July 08, 2017
 location: Denver, Colorado
 interviewer: Rebecca Scofield

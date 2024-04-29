@@ -3,6 +3,7 @@ object-id: stangejanet
 transcript: transcript-stangejanet  
 first-name: Janet
 last-name: Stange
+title: Interview with Janet Stange
 date-interviewed: February 15th, 2020
 location: Laveen Village, Arizona
 interviewer: Saraya Flaig

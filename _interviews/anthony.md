@@ -3,6 +3,7 @@ object-id: anthony
 transcript: transcript-anthony  
 first-name: Anthony
 last-name:
+title: Interview with Anthony
 date-interviewed: May 1, 2020
 location: Dallas, Texas
 interviewer: Court Fund

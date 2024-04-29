@@ -3,6 +3,7 @@ object-id: prattcandy
 transcript: transcript-prattcandy  
 first-name: Candy
 last-name: Pratt
+title: Interview with Candy Pratt
 date-interviewed: September 10, 2016
 location: Duncans Mills, California
 interviewer: Rebecca Scofield

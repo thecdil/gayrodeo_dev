@@ -3,6 +3,7 @@ object-id: leedanny
 transcript: transcript-leedanny  
 first-name: Danny
 last-name: Lee
+title: Interview with Danny Lee
 date-interviewed: May 12, 2017
 location: Palm Springs, California
 interviewer: Rebecca Scofield

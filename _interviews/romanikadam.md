@@ -3,6 +3,7 @@ object-id: romanikadam
 transcript: transcript-romanikadam  
 first-name: Adam
 last-name: Romanik
+title: Interview with Adam Romanik
 date-interviewed: October 21, 2017
 location: Albuqurque, New Mexico
 interviewer: Rebecca Scofield

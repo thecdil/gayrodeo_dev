@@ -3,6 +3,7 @@ object-id: renierdavid
 transcript: transcript-renierdavid  
 first-name: David
 last-name: Renier
+title: Interview with David Renier
 date-interviewed: September 10, 2016
 location: Duncans Mills, California
 interviewer: Rebecca Scofield

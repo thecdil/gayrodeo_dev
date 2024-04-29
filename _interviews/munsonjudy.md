@@ -3,6 +3,7 @@ object-id: munsonjudy
 transcript: transcript-munsonjudy
 first-name: Judy
 last-name: Munson
+title: Interview with Judy Munson
 date-interviewed: November 22, 2019
 location: Denver, Colorado
 interviewer: Saraya Flaig

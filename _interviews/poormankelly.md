@@ -3,6 +3,7 @@ object-id: poormankelly
 transcript: transcript-poormankelly  
 first-name: Kelly
 last-name: Poorman
+title: Interview with Kelly Poorman
 date-interviewed: May 5, 2021
 location: Virtual Interview
 interviewer: Rebecca Scofield

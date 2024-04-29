@@ -3,6 +3,7 @@ object-id: patrickcowboyram
 transcript: transcript-patrickcowboyram  
 first-name: Patrick
 last-name: Cowboy Ram
+title: Interview with Patrick Cowboy Ram
 date-interviewed: November 23, 2019
 location: Denver, CO
 interviewer: Dusty Fleener

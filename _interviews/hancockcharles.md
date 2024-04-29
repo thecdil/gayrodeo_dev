@@ -3,6 +3,7 @@ object-id: hancockcharles
 transcript: transcript-hancockcharles  
 first-name: Charles
 last-name: Hancock
+title: Interview with Charles Hancock
 date-interviewed: July 1, 2021
 location: Virtual Interview
 interviewer: Rebecca Scofield

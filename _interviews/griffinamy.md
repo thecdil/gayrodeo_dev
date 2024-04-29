@@ -3,6 +3,7 @@ object-id: griffinamy
 transcript: transcript-griffinamy
 first-name: Amy
 last-name: Griffin
+title: Interview with Amy Griffin
 date-interviewed: November 22, 2019
 location: Denver, Colorado
 interviewer: Revulai Detiv

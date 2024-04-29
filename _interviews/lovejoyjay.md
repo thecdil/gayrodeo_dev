@@ -3,6 +3,7 @@ object-id: lovejoyjay
 transcript: transcript-lovejoyjay  
 first-name: Jay
 last-name: Lovejoy
+title: Interview with Jay Lovejoy
 date-interviewed: February 16, 2020
 location: Phoenix, Arizona 
 interviewer: Revulai Detiv

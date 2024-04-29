@@ -3,6 +3,7 @@ object-id: smithlisa
 transcript: transcript-smithlisa  
 first-name: Lisa
 last-name: Smith
+title: Interview with Lisa Smith
 date-interviewed: November 20, 2016
 location: Austin, Texas
 interviewer: Rebecca Scofield

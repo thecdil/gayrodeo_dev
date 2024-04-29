@@ -3,6 +3,7 @@ object-id: hallwooddavid
 transcript: transcript-hallwooddavid  
 first-name: David
 last-name: Hallwood
+title: Interview with David Hallwood
 date-interviewed: November 19, 2016
 location: Austin, Texas
 interviewer: Rebecca Scofield

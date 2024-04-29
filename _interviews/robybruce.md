@@ -3,6 +3,7 @@ object-id: robybruce
 transcript: transcript-robybruce
 first-name: Bruce 'Grumpy'
 last-name: Roby
+title: "Interview with Bruce 'Grumpy' Roby"
 date-interviewed: September 11, 2016
 location: Duncans Mills, California
 interviewer: Rebecca Scofield

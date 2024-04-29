@@ -3,6 +3,7 @@ object-id: edwardslacey
 transcript: transcript-edwardslacey
 first-name: Lacey
 last-name: Edwards
+title: Interview with Lacey Edwards
 date-interviewed: February 15, 2020
 location: Phoenix, Arizona 
 interviewer: Court Fund

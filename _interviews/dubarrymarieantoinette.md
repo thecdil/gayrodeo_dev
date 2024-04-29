@@ -3,6 +3,7 @@ object-id: dubarrymarieantoinette
 transcript: transcript-dubarrymarieantoinette  
 first-name: Marie Antoinette
 last-name: DuBarry
+title: Interview with Marie Antoinette DuBarry
 date-interviewed: April 1, 2017
 location: Denton, Texas
 interviewer: Rebecca Scofield

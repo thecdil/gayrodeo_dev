@@ -3,6 +3,7 @@ object-id: bergmannroger
 transcript: transcript-bergmannroger  
 first-name: Roger
 last-name: Bergmann
+title: Interview with Roger Bergmann
 date-interviewed: November 19, 2016
 location: Austin, Texas
 interviewer: Rebecca Scofield

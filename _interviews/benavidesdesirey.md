@@ -3,6 +3,7 @@ object-id: benavidesdesirey
 transcript: transcript-benavidesdesirey
 first-name: Desirey
 last-name: Benavides
+title: Interview with Desirey Benavides
 date-interviewed: May 17th, 2017
 location: Palm Springs, California
 interviewer: Rebecca Scofield
