@@ -8,7 +8,7 @@
         {% assign my_integer = forloop.length %}
         {% assign my_float = my_integer | times: 1.0 %}
         {% assign rect-width = 100 | divided_by: my_float %}
-        <a onclick="scrollToLine('{{page.object-id}}{{ forloop.index0 }}');">
+        <a onclick="scrollToLine('{{page.object-id}}{{ forloop.index0 }}');" style="cursor:pointer">
           <rect id="rect{{-forloop.index0-}}" x="{{forloop.index0 | times: rect-width }}%" y="20" width="{{rect-width}}%"
             height="50" data-toggle="tooltip" data-placement="top" class="{%- assign tags = item.tags | split: ";" |
             compact | where_exp: 'item' , 'item != " "' %}{% for tag in tags %}{{tag | slugify }} {% endfor %}"
