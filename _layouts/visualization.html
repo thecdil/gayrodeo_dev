@@ -10,7 +10,7 @@ layout: page
   <div class="row" role="navigation">
     {% for n in site.data.filters %}
     <div class="col-md-3 col-4">
-      <svg class="legend" width="100%" height="25px" data-id="{{ n.tag | slugify }}" aria-labelledby="legendTitle{{ forloop.index }}" role="img">
+      <svg class="legend" width="100%" height="25px" data-id="{{ n.tag | slugify }}" aria-labelledby="legendTitle{{ forloop.index }}" role="img" style="cursor:pointer;>
         <title id="legendTitle{{ forloop.index }}">Filter by {{ n.tag }} - {{ n.description }}</title>
         <circle cx="25" cy="10" r="10" class="{{ n.tag | slugify }}"></circle>
         <text x="38" y="15">{{ n.tag }}</text>
@@ -24,7 +24,7 @@ layout: page
   {%assign transcript-name = transcript[0] %}
   {% capture narrator %}{% for t in site.transcripts %}{% if t.object-id == transcript-name %}{{t.first-name}}{% if t.last-name %} {{t.last-name}}{% endif %}{% endif %}{% endfor%}{% endcapture %}
    <section class="vizdiv" aria-labelledby="header{{ forloop.index }}">
-    <h3 id="header{{ forloop.index }}" class="mt-4 toggle_int {{ transcript-name }}" tabindex="0" style="cursor:pointer;">{{ narrator }}<i class="fas fa-filter"></i> <small>Click to filter</small></h3>
+    <h3 id="header{{ forloop.index }}" class="mt-4 toggle_int {{ transcript-name }}" tabindex="0" style="cursor:pointer;" data-id="{{transcript-name}}">{{ narrator }}<i class="fas fa-filter"></i> <small>Click to filter</small></h3>
     <svg class="chart {{transcript-name}}" width="100%" height="100px" style="overflow: visible">
       {% for item in transcript[1] %}
       {% assign my_integer = forloop.length %}
