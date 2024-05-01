@@ -53,7 +53,7 @@ endcapture -%}
       <div class="col-md-3">
         {% for conversation in site.data.conversation-filters %}
         {% if clip.tag contains conversation.tag %}
-        <h4 class="text-right question mt-5">{{ conversation.question }}</h4>
+        <p class="text-right question mt-5 h4">{{ conversation.question }}</p>
         {% endif %} {% endfor %}
       </div>
       <div class="col-md-9">
