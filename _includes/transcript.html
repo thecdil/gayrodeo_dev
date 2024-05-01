@@ -21,7 +21,7 @@
   <div id="filters-content" class="pe-md-5">
     <div class="row my-3 sticky-top bg-white border-bottom border-left border-right d-print-none py-3 w-md-75" id="filters-search" style="z-index: 0;">
       <div class="col {% unless site.data.filters %}d-none{% endunless %}">
-        <select id="filters" title="Filter by Topic" aria-label="Topic filtering dropdown select option" class="filters p-2 form-select" onchange="filterLines(this.value)">
+        <select id="filters" title="Filter by Topic" aria-label="Topic filtering dropdown select option" class="filters p-2 form-select border border-primary" onchange="filterLines(this.value)">
           <option value="all" class="reset" selected="selected reset">Filter by Topic</option>
           {% assign filters = site.data.filters %}
           {% for filter in filters %}
@@ -36,17 +36,17 @@
           <div class="row">
             <div class="col-md-6">
               <div class="input-group fs-5 mt-2 mt-md-0">
-                <input type="text" class="form-control" placeholder="Search..." aria-label="Search"
+                <input type="text" class="form-control border border-primary" placeholder="Search..." aria-label="Search"
                   aria-describedby="goButton" id="quicksearch">
                 <div class="input-group-append">
-                  <button class="btn btn-primary rounded-right border-light input-group-text" type="submit"
+                  <button class=" rounded-right border border-primary btn btn-primary" type="submit"
                     title="Search" alt="Search" id="goButton"
                     onclick="var searchval = document.getElementById('quicksearch').value; searchLines(searchval);">Go</button>
                 </div>
               </div>
             </div>
             <div class="col-md-6">
-              <button class="reset btn btn-sm btn-primary input-group-text small" onclick="vizFilter('all');">Reset
+              <button class="reset btn btn-sm btn-primary input-group-text" onclick="vizFilter('all');">Reset
                 Filters</button>
             </div>
           </div>
@@ -55,7 +55,7 @@
       <div id="filtersearch" class="col-12 d-none mt-3">
         <h5 id="linecount" class="d-none small ms-3"><span id="numberof"></span></h5>
 
-        <select class="w-100 col-md-8 mb-2 form-select p-2 border border-info" id="searchResults" onchange="scrollToLine(this.value);">
+        <select class="w-100 col-md-8 mb-2 form-select p-2 border border-primary" id="searchResults" onchange="scrollToLine(this.value);">
 
         </select>
       </div>
