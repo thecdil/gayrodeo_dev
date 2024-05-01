@@ -7,15 +7,19 @@ function codeFilter(x) {
       $("rect").removeClass (function (index, className) {
 return (className.match (/(^|\s)primary-\S+/g) || []).join(' ');
 });    
-       $("rect").addClass("black");
+     $("rect").addClass("black");
+     $('a[tabindex=""]').filter(function() {return $(this).find('rect').length > 0;}).attr('tabindex', -1);
+     $('svg[aria-pressed="true"]').attr('aria-pressed','false');
       $("circle").addClass("black");
-      $("tr").addClass("black");
+      $("tr").find('a[tabindex="0"]').attr('tabindex', -1);
+      $("tr").addClass("hidden");
       $("section.contentsdiv").addClass("hidden");
       $("section.vizdiv").addClass("hidden");
-      $('rect.' + x).toggleClass("black").addClass("primary-" + x);
-      $('circle.' + x).toggleClass("black");
-      $('tr.' + x).toggleClass("black");
-      $("tr").not('.black').closest('section.contentsdiv').removeClass("hidden");
+      $('rect.' + x).toggleClass("black").addClass("primary-" + x).parent('a').attr('tabindex', 0);
+      $('circle.' + x).toggleClass("black").parent('svg').attr('aria-pressed','true');
+      $('tr.' + x).toggleClass("hidden");
+      $("tr").not('.hidden').closest('section.contentsdiv').removeClass("hidden");
+      $("tr").not('.hidden').find('a[tabindex="-1"]').attr('tabindex', 0);
       $("rect").not('.black').closest('section.vizdiv').removeClass("hidden");
       //Add another parameter. 
       params.set('filter', x);
@@ -28,8 +32,9 @@ return (className.match (/(^|\s)primary-\S+/g) || []).join(' ');
 $("rect").removeClass (function (index, className) {
 return (className.match (/(^|\s)primary-\S+/g) || []).join(' ');
 });    
-      $("rect").addClass("dark");            
-      $('rect.' + x).toggleClass("dark").addClass("primary-" + x);
+      $("rect").addClass("dark");
+      $('a[tabindex="0"]').filter(function() {return $(this).find('rect').length > 0;}).attr('tabindex', -1);            
+      $('rect.' + x).toggleClass("dark").addClass("primary-" + x).parent('a').attr('tabindex', 0);      
       $("rect").not('.dark').closest('section.vizdiv').removeClass("hidden");
   }
 
@@ -56,8 +61,10 @@ return (className.match (/(^|\s)primary-\S+/g) || []).join(' ');
   });
   $("#reset").click(function () {
       $("rect").removeClass("black");
+      $('a[tabindex="0"]').filter(function() {return $(this).find('rect').length > 0;}).attr('tabindex', -1);
+      $('svg[aria-pressed="true"]').attr('aria-pressed','false');
       $("circle").removeClass("black");
-      $("tr").removeClass("black");
+      $("tr").removeClass("hidden");
       $("table").removeClass("hidden");
       $("svg").removeClass("hidden");
       $("h3").removeClass("hidden");
@@ -83,6 +90,31 @@ return (className.match (/(^|\s)primary-\S+/g) || []).join(' ');
   $(function () {
       $('[data-toggle="tooltip"]').tooltip()
   });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all SVG elements with the role of 'button'
+    var svgButtons = document.querySelectorAll('svg[role="button"]');
+
+    // Function to simulate the click
+    function triggerClick(event) {
+        // Check if the key pressed is 'Enter' (13) or 'Space' (32)
+        if (event.keyCode === 13 || event.keyCode === 32) {
+            event.preventDefault();  // Prevent the default action to stop scrolling when pressing Space
+            // Dispatch a new 'click' event
+            var clickEvent = new MouseEvent('click', {
+                view: window,
+                bubbles: true,
+                cancelable: true
+            });
+            event.currentTarget.dispatchEvent(clickEvent);
+        }
+    }
+
+    // Add keydown listeners to each SVG button
+    svgButtons.forEach(function(svg) {
+        svg.addEventListener('keydown', triggerClick);
+    });
 });
 </script>
 
