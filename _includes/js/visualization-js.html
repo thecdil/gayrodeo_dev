@@ -3,7 +3,6 @@
     const params = url.searchParams;
 
 function codeFilter(x) {
-      console.log(x);
       $("rect").removeClass (function (index, className) {
 return (className.match (/(^|\s)primary-\S+/g) || []).join(' ');
 });    
@@ -12,15 +11,15 @@ return (className.match (/(^|\s)primary-\S+/g) || []).join(' ');
      $('svg[aria-pressed="true"]').attr('aria-pressed','false');
       $("circle").addClass("black");
       $("tr").find('a[tabindex="0"]').attr('tabindex', -1);
-      $("tr").addClass("hidden");
-      $("section.contentsdiv").addClass("hidden");
-      $("section.vizdiv").addClass("hidden");
+      $("tr").addClass("hidden").attr('aria-hidden','true');;
+      $("section.contentsdiv").addClass("hidden").attr('aria-hidden','true');;
+      $("section.vizdiv").addClass("hidden").attr('aria-hidden','true');
       $('rect.' + x).toggleClass("black").addClass("primary-" + x).parent('a').attr('tabindex', 0);
       $('circle.' + x).toggleClass("black").parent('svg').attr('aria-pressed','true');
-      $('tr.' + x).toggleClass("hidden");
-      $("tr").not('.hidden').closest('section.contentsdiv').removeClass("hidden");
+      $('tr.' + x).toggleClass("hidden").attr('aria-hidden','false');
+      $("tr").not('.hidden').closest('section.contentsdiv').removeClass("hidden").attr('aria-hidden','false');
       $("tr").not('.hidden').find('a[tabindex="-1"]').attr('tabindex', 0);
-      $("rect").not('.black').closest('section.vizdiv').removeClass("hidden");
+      $("rect").not('.black').closest('section.vizdiv').removeClass("hidden").attr('aria-hidden','false');
       //Add another parameter. 
       params.set('filter', x);
       console.log(params.toString());
@@ -39,11 +38,11 @@ return (className.match (/(^|\s)primary-\S+/g) || []).join(' ');
   }
 
   function interviewFilter(x) { 
-      $("table").removeClass("hidden");
-      $("svg").removeClass("hidden");
-      $("table").not('.' + x).toggleClass("hidden");
-      $("svg.chart").not('.' + x).toggleClass("hidden");
-      $("h3").not('.' + x).toggleClass("hidden");
+      $("table").removeClass("hidden").removeAttr("aria-hidden");
+      $("svg").removeClass("hidden").removeAttr("aria-hidden");
+      $("table").not('.' + x).toggleClass("hidden").attr('aria-hidden','true');
+      $("svg.chart").not('.' + x).toggleClass("hidden").attr('aria-hidden','true');
+      $("h3").not('.' + x).toggleClass("hidden").attr('aria-hidden','true');
       //Add another parameter. 
       params.set('id', x);
       console.log(params.toString());
@@ -64,12 +63,12 @@ return (className.match (/(^|\s)primary-\S+/g) || []).join(' ');
       $('a[tabindex="0"]').filter(function() {return $(this).find('rect').length > 0;}).attr('tabindex', -1);
       $('svg[aria-pressed="true"]').attr('aria-pressed','false');
       $("circle").removeClass("black");
-      $("tr").removeClass("hidden");
-      $("table").removeClass("hidden");
+      $("tr").removeClass("hidden").removeAttr("aria-hidden");
+      $("table").removeClass("hidden").removeAttr("aria-hidden");
       $("svg").removeClass("hidden");
-      $("h3").removeClass("hidden");
-      $("div").removeClass("hidden");
-      $("section").removeClass("hidden");
+      $("h3").removeClass("hidden").removeAttr("aria-hidden");
+      $("div").removeClass("hidden").removeAttr("aria-hidden");
+      $("section").removeClass("hidden").removeAttr("aria-hidden");
       params.set('id', '');
       params.set('filter', '');
       window.history.replaceState({}, '', location.pathname);
