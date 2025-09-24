@@ -14,7 +14,7 @@ _The Voices of Gay Rodeo_ online exhibit was developed as part of the Gay Rodeo 
 This project would not be possible without the tireless historical and organizational work conducted by IGRA’s leadership and royalty teams, and individuals like Frank Harrell, Roger Bergmann, Patrick Terry, Brian Helander, Candy Pratt, and so many more.
 
 For information on the history of gay rodeo see: [http://gayrodeohistory.org/ \
-](http://gayrodeohistory.org/)To see IGRA’s upcoming schedule see: [https://www.igra.com/CalendarRodeo.htm](https://www.igra.com/CalendarRodeo.htm)
+](http://gayrodeohistory.org/)To see IGRA’s upcoming schedule see: [http://igra.com/CalendarRodeoPublic.htm](http://igra.com/CalendarRodeoPublic.htm)
 
 {:.pt-5 .pb-2}
 ## Design
